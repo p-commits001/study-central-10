@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Class 10 Hub"
+version = "1.0.0"
+id = "artifacts/class10-hub"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24651
+
+[services.development]
+run = "pnpm --filter @workspace/class10-hub run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/class10-hub", "run", "build" ]
+publicDir = "artifacts/class10-hub/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24651"
+BASE_PATH = "/"

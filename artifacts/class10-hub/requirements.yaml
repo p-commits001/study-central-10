@@ -1,0 +1,18 @@
+packages:
+  "framer-motion": "For smooth page transitions, stagger animations, and scroll reveals"
+  "next-themes": "For robust dark/light mode switching"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility to safely merge Tailwind classes without style conflicts"
+
+images:
+  - path: "artifacts/class10-hub/public/images/hero-abstract.png"
+    description: "3D abstract futuristic composition with floating geometric shapes, books, and glowing digital elements in vibrant blue and purple neon gradients, representing modern digital education, high quality, 8k resolution, clean background"
+    aspect_ratio: "16:9"
+  - path: "artifacts/class10-hub/public/images/study-illustration.png"
+    description: "Modern flat vector illustration of a student studying at a desk with a laptop and floating UI elements in deep blue and vibrant violet colors, premium SaaS aesthetic"
+    aspect_ratio: "4:3"
+
+notes:
+  - App is entirely frontend-based, using mock data and local storage for persistence.
+  - Requires shadcn/ui components already present in the workspace.
+  - Using framer-motion for premium feel.
