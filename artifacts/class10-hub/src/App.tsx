@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "./components/theme-provider";
 import { Layout } from "./components/layout";
 
-// Pages
 import Home from "./pages/home";
 import NotesIndex from "./pages/notes-index";
 import NotesSubject from "./pages/notes-subject";
@@ -14,6 +13,8 @@ import Questions from "./pages/questions";
 import Pdfs from "./pages/pdfs";
 import Tips from "./pages/tips";
 import SearchPage from "./pages/search";
+import AiTutor from "./pages/ai-tutor";
+import Books from "./pages/books";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,8 @@ function Router() {
         <Route path="/pdfs" component={Pdfs} />
         <Route path="/tips" component={Tips} />
         <Route path="/search" component={SearchPage} />
+        <Route path="/ai-tutor" component={AiTutor} />
+        <Route path="/books" component={Books} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

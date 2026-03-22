@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { useTheme } from "./theme-provider";
 import { 
   BookOpen, Brain, Download, Lightbulb, Search, 
-  Sun, Moon, Menu, X, Share2, GraduationCap, ChevronRight
+  Sun, Moon, Menu, X, Share2, GraduationCap, ChevronRight, Sparkles
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
@@ -12,8 +12,10 @@ const navLinks = [
   { name: "Home", path: "/", icon: GraduationCap },
   { name: "Notes", path: "/notes", icon: BookOpen },
   { name: "Questions", path: "/questions", icon: Brain },
+  { name: "NCERT Books", path: "/books", icon: BookOpen },
   { name: "PDFs", path: "/pdfs", icon: Download },
   { name: "Tips", path: "/tips", icon: Lightbulb },
+  { name: "AI Tutor", path: "/ai-tutor", icon: Sparkles },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
