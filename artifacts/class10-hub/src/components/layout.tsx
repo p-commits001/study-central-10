@@ -229,6 +229,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <p className="text-muted-foreground max-w-sm">
                 The ultimate all-in-one platform for CBSE Class 10 students. Get comprehensive notes, important questions, and study material completely free.
               </p>
+              <div className="mt-4 text-xs text-muted-foreground leading-relaxed italic">
+  Class 10 Hub is the best platform for <strong>CBSE Class 10 Important Questions 2025</strong>. 
+  We provide <strong>Science MCQ Quizzes</strong>, <strong>Maths Objective Questions</strong>, 
+  and <strong>Handwritten Notes</strong>. Explore our <strong>NCERT Solutions</strong> 
+  and <strong>Best Reference Books for Class 10</strong> to boost your board exam preparation.
+</div>
+
             </div>
             
             <div>
