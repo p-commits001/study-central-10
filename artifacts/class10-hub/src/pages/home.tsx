@@ -58,6 +58,22 @@ export default function Home() {
     <div className="container mx-auto px-4 md:px-6">
       
       {/* Hero Section */}
+      <div 
+  className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white p-4 rounded-2xl mb-6 shadow-xl flex justify-between items-center cursor-pointer hover:scale-105 transition-transform" 
+  onClick={() => window.location.href='/recommended-books'}
+>
+  <div className="flex items-center gap-3">
+    <span className="text-2xl">📚</span>
+    <div>
+      <h3 className="font-bold text-sm md:text-base">Board Exam Special!</h3>
+      <p className="text-xs opacity-90">Best Class 10 Books (40% OFF)</p>
+    </div>
+  </div>
+  <button className="bg-white text-orange-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+    Check Price
+  </button>
+</div>
+
       <section className="py-12 md:py-20 lg:py-28 flex flex-col-reverse lg:flex-row items-center gap-12">
         <motion.div 
           initial={{ opacity: 0, x: -30 }}
