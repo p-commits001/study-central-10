@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BookOpen, Star, ShoppingCart, ExternalLink } from "lucide-react";
+import { Star, ExternalLink, Tag } from "lucide-react";
 
 const books = [
   {
@@ -9,11 +9,14 @@ const books = [
     publisher: "Rachna Sagar",
     rating: 4.8,
     reviews: "2,341",
+    originalPrice: "₹499",
+    discountPrice: "₹299",
+    discount: "40% OFF",
     description: "Complete CBSE Class 10 Science with chapter-wise notes, solved examples, and previous year questions. Best for board exam preparation.",
     tags: ["Science", "Board Exam", "NCERT Based"],
     color: "from-green-500 to-emerald-600",
     emoji: "🔬",
-    affiliateLink: "https://amazon.in", // Replace with your affiliate link
+    affiliateLink: "https://amzn.in/d/example1", // 👈 Replace with your Amazon Affiliate link
     badge: "Bestseller",
   },
   {
@@ -23,11 +26,14 @@ const books = [
     publisher: "Dhanpat Rai Publications",
     rating: 4.9,
     reviews: "5,812",
+    originalPrice: "₹650",
+    discountPrice: "₹389",
+    discount: "40% OFF",
     description: "The most trusted Maths book for Class 10. Thousands of solved problems, exercises, and MCQs covering the full CBSE syllabus.",
     tags: ["Mathematics", "Problem Solving", "CBSE"],
     color: "from-blue-500 to-indigo-600",
     emoji: "📐",
-    affiliateLink: "https://amazon.in", // Replace with your affiliate link
+    affiliateLink: "https://amzn.in/d/example2", // 👈 Replace with your Amazon Affiliate link
     badge: "Most Popular",
   },
   {
@@ -37,11 +43,14 @@ const books = [
     publisher: "Oswaal Books",
     rating: 4.7,
     reviews: "3,109",
-    description: "All subjects combined — includes 10 years of solved papers, mind maps, revision notes, and self-assessment tests for 2025 exams.",
+    originalPrice: "₹895",
+    discountPrice: "₹549",
+    discount: "38% OFF",
+    description: "All subjects — includes 10 years of solved papers, mind maps, revision notes, and self-assessment tests for 2025 exams.",
     tags: ["All Subjects", "Question Bank", "2025 Exam"],
     color: "from-purple-500 to-violet-600",
     emoji: "📚",
-    affiliateLink: "https://amazon.in", // Replace with your affiliate link
+    affiliateLink: "https://amzn.in/d/example3", // 👈 Replace with your Amazon Affiliate link
     badge: "Editor's Choice",
   },
 ];
@@ -54,11 +63,11 @@ export default function RecommendedBooks() {
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-3">
-            <BookOpen size={14} /> Hand-picked for Class 10
+            <Tag size={14} /> Hand-picked for Class 10 Toppers
           </div>
           <h1 className="text-3xl md:text-5xl font-display font-extrabold mb-3">Recommended Books</h1>
           <p className="text-muted-foreground max-w-xl mx-auto text-lg">
-            Top reference books trusted by Class 10 CBSE toppers across India. Available on Amazon.
+            Top reference books trusted by Class 10 CBSE toppers across India — at discounted prices on Amazon!
           </p>
         </motion.div>
 
@@ -74,8 +83,11 @@ export default function RecommendedBooks() {
             >
               {/* Cover */}
               <div className={`bg-gradient-to-br ${book.color} p-8 flex flex-col items-center justify-center relative`}>
-                <span className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                <span className="absolute top-3 left-3 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-2.5 py-1 rounded-full">
                   {book.badge}
+                </span>
+                <span className="absolute top-3 right-3 bg-orange-500 text-white text-xs font-extrabold px-2.5 py-1 rounded-full shadow-lg">
+                  {book.discount}
                 </span>
                 <div className="text-6xl mb-2">{book.emoji}</div>
                 <div className="text-white/80 text-xs font-medium">{book.publisher}</div>
@@ -90,7 +102,7 @@ export default function RecommendedBooks() {
                 </div>
 
                 <h2 className="font-display font-bold text-lg leading-tight mb-1">{book.title}</h2>
-                <p className="text-sm text-muted-foreground mb-1">by {book.author}</p>
+                <p className="text-sm text-muted-foreground mb-2">by {book.author}</p>
 
                 {/* Rating */}
                 <div className="flex items-center gap-1.5 mb-3">
@@ -100,18 +112,26 @@ export default function RecommendedBooks() {
                     ))}
                   </div>
                   <span className="text-sm font-semibold">{book.rating}</span>
-                  <span className="text-xs text-muted-foreground">({book.reviews} reviews)</span>
+                  <span className="text-xs text-muted-foreground">({book.reviews})</span>
                 </div>
 
-                <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">{book.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">{book.description}</p>
 
+                {/* Price */}
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-2xl font-extrabold text-foreground">{book.discountPrice}</span>
+                  <span className="text-sm text-muted-foreground line-through">{book.originalPrice}</span>
+                  <span className="text-xs font-bold text-orange-500 bg-orange-100 dark:bg-orange-900/30 px-2 py-0.5 rounded-full">{book.discount}</span>
+                </div>
+
+                {/* Amazon Button — Orange */}
                 <a
                   href={book.affiliateLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-gradient-to-r ${book.color} text-white font-semibold text-sm hover:opacity-90 transition-opacity`}
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-[#FF9900] hover:bg-[#e88c00] text-white font-bold text-sm transition-colors shadow-lg shadow-orange-400/30"
                 >
-                  <ShoppingCart size={16} /> Buy on Amazon
+                  🛒 Check Discount Price on Amazon
                   <ExternalLink size={13} />
                 </a>
               </div>
@@ -125,7 +145,7 @@ export default function RecommendedBooks() {
           transition={{ delay: 0.5 }}
           className="text-center text-xs text-muted-foreground mt-8"
         >
-          * Clicking "Buy on Amazon" may earn us a small commission at no extra cost to you. This helps keep Class 10 Hub free!
+          * Clicking the button may earn us a small commission at no extra cost to you. This helps keep Class 10 Hub 100% free!
         </motion.p>
       </div>
     </div>
