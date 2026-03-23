@@ -12,8 +12,9 @@ const navLinks = [
   { name: "Home", path: "/", icon: GraduationCap },
   { name: "Notes", path: "/notes", icon: BookOpen },
   { name: "Questions", path: "/questions", icon: Brain },
+  { name: "Quiz", path: "/quiz", icon: Brain },
+  { name: "Resources", path: "/resources", icon: Download },
   { name: "NCERT Books", path: "/books", icon: BookOpen },
-  { name: "PDFs", path: "/pdfs", icon: Download },
   { name: "Tips", path: "/tips", icon: Lightbulb },
   { name: "AI Tutor", path: "/ai-tutor", icon: Sparkles },
 ];

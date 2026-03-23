@@ -15,6 +15,9 @@ import Tips from "./pages/tips";
 import SearchPage from "./pages/search";
 import AiTutor from "./pages/ai-tutor";
 import Books from "./pages/books";
+import RecommendedBooks from "./pages/recommended-books";
+import Quiz from "./pages/quiz";
+import Resources from "./pages/resources";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -33,6 +36,9 @@ function Router() {
         <Route path="/search" component={SearchPage} />
         <Route path="/ai-tutor" component={AiTutor} />
         <Route path="/books" component={Books} />
+        <Route path="/recommended-books" component={RecommendedBooks} />
+        <Route path="/quiz" component={Quiz} />
+        <Route path="/resources" component={Resources} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
