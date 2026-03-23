@@ -174,6 +174,36 @@ export function Layout({ children }: { children: React.ReactNode }) {
         )}
       </AnimatePresence>
 
+      {/* Floating AI Tutor Button */}
+      <AnimatePresence>
+        {location !== "/ai-tutor" && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.5, y: 20 }}
+            transition={{ type: "spring", bounce: 0.4 }}
+            className="fixed bottom-6 right-6 z-50"
+          >
+            <Link href="/ai-tutor">
+              <motion.div
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-2xl shadow-purple-500/40 cursor-pointer"
+              >
+                <div className="relative">
+                  <Sparkles size={22} />
+                  <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-white animate-pulse" />
+                </div>
+                <div className="hidden sm:block">
+                  <div className="text-xs font-medium opacity-80 leading-none mb-0.5">Ask anything</div>
+                  <div className="text-sm font-bold leading-none">AI Tutor</div>
+                </div>
+              </motion.div>
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Main Content */}
       <main className="flex-1 pt-24 pb-16 relative">
         {/* Subtle background decorative blobs */}
