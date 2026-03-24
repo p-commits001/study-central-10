@@ -1,3 +1,5 @@
+import { CURRENT_SESSION } from "../constants";
+
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { BookOpen, Brain, Download, Lightbulb, ArrowRight, Target, Flame, Trophy } from "lucide-react";
@@ -58,6 +60,11 @@ export default function Home() {
     <div className="container mx-auto px-4 md:px-6">
       
       {/* Hero Section */}
+      import { CURRENT_SESSION } from "../constants";
+
+// Phir jahan 2024 likha tha wahan ye dalo:
+<h1>Targeting {CURRENT_SESSION} Board Exams</h1>
+
       <div 
   className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white p-4 rounded-2xl mb-6 shadow-xl flex justify-between items-center cursor-pointer hover:scale-105 transition-transform" 
   onClick={() => window.location.href='/recommended-books'}

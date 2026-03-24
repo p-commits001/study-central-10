@@ -1,3 +1,4 @@
+import { CURRENT_SESSION } from "../constants";
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { useTheme } from "./theme-provider";
@@ -230,11 +231,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 The ultimate all-in-one platform for CBSE Class 10 students. Get comprehensive notes, important questions, and study material completely free.
               </p>
               <div className="mt-4 text-xs text-muted-foreground leading-relaxed italic">
-  Class 10 Hub is the best platform for <strong>CBSE Class 10 Important Questions 2026-2027</strong>. 
-  We provide <strong>Science MCQ Quizzes</strong>, <strong>Maths Objective Questions</strong>, 
-  and <strong>Handwritten Notes</strong>. Explore our <strong>NCERT Solutions</strong> 
-  and <strong>Best Reference Books for Class 10</strong> to boost your board exam preparation.
-</div>
+                Class 10 Hub is the best platform for <strong>CBSE Class 10 Important Questions {CURRENT_SESSION}</strong>. 
+                We provide <strong>Science MCQ Quizzes</strong>, <strong>Maths Objective Questions</strong>, 
+                and <strong>Handwritten Notes</strong>. Explore our <strong>NCERT Solutions</strong> 
+                and <strong>Best Reference Books for Class 10</strong> to boost your board exam preparation for the 
+                <strong> {CURRENT_SESSION}</strong> session.
+              </div>
+
 
             </div>
 
@@ -271,8 +274,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
           
           <div className="pt-8 border-t border-border text-center flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Class 10 Hub. All rights reserved.
+              © {new Date().getFullYear()} Class 10 Hub. Session {CURRENT_SESSION}
             </p>
+
             <p className="text-xs text-muted-foreground/70">
               Disclaimer: This is an educational tool. Not affiliated with CBSE.
             </p>
