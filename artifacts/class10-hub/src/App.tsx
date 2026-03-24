@@ -14,6 +14,8 @@ import Pdfs from "./pages/pdfs";
 import Tips from "./pages/tips";
 import SearchPage from "./pages/search";
 import AiTutor from "./pages/ai-tutor";
+// @ts-ignore
+import About from "./pages/about";
 import Books from "./pages/books";
 import RecommendedBooks from "./pages/recommended-books";
 import Quiz from "./pages/quiz";
@@ -39,6 +41,8 @@ function Router() {
         <Route path="/recommended-books" component={RecommendedBooks} />
         <Route path="/quiz" component={Quiz} />
         <Route path="/resources" component={Resources} />
+        <Route path="/about" component={About} />
+
         <Route component={NotFound} />
       </Switch>
     </Layout>
