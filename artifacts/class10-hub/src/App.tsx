@@ -15,7 +15,7 @@ import Pdfs from "./pages/pdfs";
 import Tips from "./pages/tips";
 import SearchPage from "./pages/search";
 import AiTutor from "./pages/ai-tutor";
-// @ts-ignore
+// @ts-ignore 
 import About from "./pages/about";
 import Books from "./pages/books";
 import RecommendedBooks from "./pages/recommended-books";
