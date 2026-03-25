@@ -103,6 +103,20 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* --- AdSense Ad Unit Start --- */}
+<div className="container mx-auto px-4 my-8 flex justify-center">
+  <ins className="adsbygoogle"
+       style={{ display: 'block', width: '100%', textAlign: 'center' }}
+       data-ad-client="ca-pub-1922010090842018"
+       data-ad-slot="7029376227"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+</div>
+<script>
+     (window.adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+{/* --- AdSense Ad Unit End --- */}
+
 
       {/* Features Grid */}
       <section className="py-12">
