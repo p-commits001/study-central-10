@@ -3,9 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { useTheme } from "./theme-provider";
 import { 
-  BookOpen, Brain, Download, Lightbulb, Search, 
-  Sun, Moon, Menu, X, Share2, GraduationCap, ChevronRight, Sparkles
+  Sun, Moon, Menu, X, Share2, GraduationCap, ChevronRight, Sparkles, 
+  BookOpen, Brain, Download, Lightbulb, MessageSquare, User, Search 
 } from "lucide-react";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
 
@@ -19,6 +20,9 @@ const navLinks = [
   { name: "Best Books", path: "/recommended-books", icon: BookOpen },
   { name: "Tips", path: "/tips", icon: Lightbulb },
   { name: "AI Tutor", path: "/ai-tutor", icon: Sparkles },
+  { name: "Contact", path: "/contact", icon: MessageSquare },
+  { name: "About", path: "/about", icon: User },
+
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {

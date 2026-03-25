@@ -1,3 +1,4 @@
+import Contact from "./pages/contact";
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -42,7 +43,7 @@ function Router() {
         <Route path="/quiz" component={Quiz} />
         <Route path="/resources" component={Resources} />
         <Route path="/about" component={About} />
-
+        <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
