@@ -248,7 +248,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-display font-semibold text-lg mb-4">Quick Links</h3>
               <ul className="space-y-3">
-                {navLinks.slice(1).map(link => (
+                {navLinks.slice(1, -1).map(link => (
+
                   <li key={link.name}>
                     <Link href={link.path}>
                       <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer inline-flex items-center gap-2">
@@ -270,7 +271,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-display font-semibold text-lg mb-4">Contact</h3>
               <ul className="space-y-3 text-muted-foreground">
-                <li>Email: priyanshupriyanshu7659</li>
+                <li>Email: priyanshupriyanshu7659@gmail.com</li>
                 <li>Made with ❤️ in India</li>
               </ul>
             </div>
