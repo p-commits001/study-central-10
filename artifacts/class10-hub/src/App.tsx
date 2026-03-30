@@ -43,6 +43,12 @@ function Router() {
         <Route path="/quiz" component={Quiz} />
         <Route path="/resources" component={Resources} />
         <Route path="/about" component={About} />
+        <div className="flex gap-4 justify-center text-sm text-gray-500 mt-4">
+  <a href="/privacy-policy">Privacy Policy</a>
+  <a href="/disclaimer">Disclaimer</a>
+  <a href="/contact">Contact Us</a>
+</div>
+
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
