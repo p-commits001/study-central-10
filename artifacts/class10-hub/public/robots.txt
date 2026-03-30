@@ -1,4 +1,9 @@
+# Class 10 Hub Robots.txt - Created by Priyanshu Taraori
 User-agent: *
 Allow: /
+Allow: /notes
+Allow: /questions
+Allow: /quiz
 
+# Sitemaps Google ko rasta dikhane ke liye
 Sitemap: https://study-central--bkon02980.replit.app/sitemap.xml
