@@ -252,30 +252,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <span className="text-[10px] opacity-80 mb-0.5 text-left">Ask AI</span>
                   <span className="font-bold text-sm text-left">AI Tutor</span>
                 </div>
-                {/* Mobile Viral Share Bar (WhatsApp + Insta/Copy) */}
-<div className="fixed bottom-0 left-0 right-0 z-[100] lg:hidden bg-background/80 backdrop-blur-lg border-t p-3 flex gap-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
-  
-  {/* WhatsApp Button */}
-  <a 
-    href={`https://wa.me/?text=Bhai ye dekh! Class 10 ke saare Notes, Important Questions aur AI Tutor yahan free mein mil rahe hain 🚀🔥 %0A%0A ${window.location.href}`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold py-3 rounded-xl active:scale-95 transition-transform"
-  >
-    <Share2 size={18} />
-    <span>WhatsApp Share</span>
-  </a>
-
-      });
-    }}
-    className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white font-bold py-3 rounded-xl active:scale-95 transition-transform"
-  >
-    <Sparkles size={18} />
-    <span>Insta Link</span>
-  </button>
-
-</div>
-
+              
               </motion.div>
             </Link>
           </motion.div>
