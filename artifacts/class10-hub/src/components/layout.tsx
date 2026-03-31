@@ -266,13 +266,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <span>WhatsApp Share</span>
   </a>
 
-  {/* Instagram / Copy Link Button */}
-  <button 
-    onClick={() => {
-      navigator.clipboard.writeText(window.location.href);
-      toast({
-        title: "Link Copied!",
-        description: "Ab ise Insta Story ya doston ko bhejo! 🚀",
       });
     }}
     className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white font-bold py-3 rounded-xl active:scale-95 transition-transform"
