@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { useTheme } from "./theme-provider";
 import { 
-  Sun, Moon, Menu, X, Share2, GraduationCap, ChevronRight, Sparkles, 
+  Sun, Moon, Menu, X, Share2, GraduationCap, ChevronRight, Sparkles, AlertTriangle, ShieldCheck,
   BookOpen, Brain, Download, Lightbulb, MessageSquare, User, Search 
 } from "lucide-react";
 
@@ -22,6 +22,9 @@ const navLinks = [
   { name: "AI Tutor", path: "/ai-tutor", icon: Sparkles },
   { name: "Contact", path: "/contact", icon: MessageSquare },
   { name: "About", path: "/about", icon: User },
+// Is tarah ka code hoga, bas ye do lines add karni hain
+{ name: 'Privacy Policy', href: '/privacy-policy', icon: ShieldCheck },
+{ name: 'Disclaimer', href: '/disclaimer', icon: AlertTriangle },
 
 ];
 
@@ -268,6 +271,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
     </span>
   </Link>
 </li>
+            <div className="flex flex-wrap justify-center gap-4 mt-4 mb-2 text-xs md:text-sm text-muted-foreground border-t pt-4">
+  <a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</a>
+  <span className="hidden md:inline">|</span>
+  <a href="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</a>
+  <span className="hidden md:inline">|</span>
+  <a href="/about" className="hover:text-primary transition-colors">About Us</a>
+  <span className="hidden md:inline">|</span>
+  <a href="/contact" className="hover:text-primary transition-colors">Contact</a>
+</div>
+
             <div>
               <h3 className="font-display font-semibold text-lg mb-4">Contact</h3>
               <ul className="space-y-3 text-muted-foreground">
