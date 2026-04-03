@@ -1,11 +1,12 @@
-import Contact from "./pages/contact";
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "./components/theme-provider";
 import { Layout } from "./components/layout";
+import { AnimatePresence, motion } from "framer-motion";
 
+// Pages Imports
 import Home from "./pages/home";
 import NotesIndex from "./pages/notes-index";
 import NotesSubject from "./pages/notes-subject";
@@ -15,51 +16,94 @@ import Pdfs from "./pages/pdfs";
 import Tips from "./pages/tips";
 import SearchPage from "./pages/search";
 import AiTutor from "./pages/ai-tutor";
-// @ts-ignore 
 import About from "./pages/about";
 import Books from "./pages/books";
 import RecommendedBooks from "./pages/recommended-books";
 import Quiz from "./pages/quiz";
 import Resources from "./pages/resources";
-import NotFound from "@/pages/not-found";
 import Disclaimer from "./pages/Disclaimer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Contact from "./pages/contact";
 
 const queryClient = new QueryClient();
 
-function Router() {
+            
+            function Router() {
   return (
     <Layout>
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/notes" component={NotesIndex} />
-        <Route path="/notes/:subject" component={NotesSubject} />
-        <Route path="/notes/:subject/:chapter" component={NotesDetail} />
-        <Route path="/questions" component={Questions} />
-        <Route path="/pdfs" component={Pdfs} />
-        <Route path="/tips" component={Tips} />
-        <Route path="/search" component={SearchPage} />
-        <Route path="/ai-tutor" component={AiTutor} />
-        <Route path="/books" component={Books} />
-        <Route path="/recommended-books" component={RecommendedBooks} />
-        <Route path="/quiz" component={Quiz} />
-        <Route path="/resources" component={Resources} />
-        <Route path="/about" component={About}   />
-        <Route path="/disclaimer" component={Disclaimer} />
-        <Route path="/privacy-policy" component={PrivacyPolicy} />
-        <Route path="/contact" component={Contact} />
-        <Route component={NotFound} />
-      </Switch>
+      <AnimatePresence mode="wait">
+
+        <Route path="/">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+            <Home />
+          </motion.div>
+        </Route>
+
+        <Route path="/notes">
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
+            <NotesIndex />
+          </motion.div>
+        </Route>
+
+        <Route path="/notes/:subject">
+          <NotesSubject />
+        </Route>
+
+        <Route path="/notes/:subject/:chapter">
+          <NotesDetail />
+        </Route>
+
+        <Route path="/ai-tutor">
+          <AiTutor />
+        </Route>
+
+        <Route path="/quiz">
+          <Quiz />
+        </Route>
+
+        <Route path="/questions">
+          <Questions />
+        </Route>
+
+        <Route path="/pdfs">
+          <Pdfs />
+        </Route>
+
+        <Route path="/tips">
+          <Tips />
+        </Route>
+
+        <Route path="/resources">
+          <Resources />
+        </Route>
+
+        <Route path="/about">
+          <About />
+        </Route>
+
+        <Route path="/contact">
+          <Contact />
+        </Route>
+
+        <Route path="/privacy-policy">
+          <PrivacyPolicy />
+        </Route>
+
+        <Route path="/disclaimer">
+          <Disclaimer />
+        </Route>
+
+      </AnimatePresence>
     </Layout>
   );
-}
+            }
 
 function App() {
   return (
     <ThemeProvider defaultTheme="system" storageKey="class10hub-theme">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
-          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+          <WouterRouter base={import.meta.env.BASE_URL?.replace(/\/$/, "")}>
             <Router />
           </WouterRouter>
           <Toaster />
