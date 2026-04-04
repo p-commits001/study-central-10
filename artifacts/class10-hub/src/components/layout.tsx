@@ -32,6 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   // --- Login State Check ---
   useEffect(() => {
+    if (!supabase) return;
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
     });
@@ -43,6 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   }, []);
 
   const handleGoogleLogin = async () => {
+    if (!supabase) return alert("Login abhi available nahi hai.");
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: { redirectTo: window.location.origin }
@@ -51,6 +53,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   };
 
   const handleEmailLogin = async () => {
+    if (!supabase) return alert("Login abhi available nahi hai.");
     if (!email) return alert("Email dalo bhai!");
     setLoading(true);
     const { error } = await supabase.auth.signInWithOtp({ email });

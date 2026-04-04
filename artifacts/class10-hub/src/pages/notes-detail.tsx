@@ -5,10 +5,32 @@ import { ChevronLeft, Share2 } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 import { useToast } from "@/hooks/use-toast";
 
-// Very basic Markdown to clean HTML renderer for the mock content
+// Markdown to HTML renderer with table, blockquote, and list support
 const renderMarkdown = (content: string) => {
-  // Simple regex parser for our specific mock markdown
   let html = content;
+
+  // Tables — convert markdown tables to HTML
+  html = html.replace(/((?:^\|.+\|\n?)+)/gm, (tableBlock) => {
+    const rows = tableBlock.trim().split('\n').filter(r => r.trim());
+    if (rows.length < 2) return tableBlock;
+    const isHeaderSep = (row: string) => /^\|[\s\-:|]+\|$/.test(row.trim());
+    let headerRow = rows[0];
+    let bodyRows = rows.filter((_, i) => i > 0 && !isHeaderSep(rows[i]));
+
+    const parseRow = (row: string, tag: string) =>
+      '<tr>' + row.trim().replace(/^\||\|$/g, '').split('|')
+        .map(cell => `<${tag} class="${tag === 'th' ? 'px-4 py-2 bg-primary/10 font-bold text-foreground text-left' : 'px-4 py-2 border-t border-border text-foreground/80'}">${cell.trim()}</${tag}>`)
+        .join('') + '</tr>';
+
+    return `<div class="overflow-x-auto my-6 rounded-xl border border-border"><table class="w-full text-sm border-collapse">
+      <thead>${parseRow(headerRow, 'th')}</thead>
+      <tbody>${bodyRows.map(r => parseRow(r, 'td')).join('')}</tbody>
+    </table></div>`;
+  });
+
+  // Blockquotes
+  html = html.replace(/^> (.*$)/gim, '<blockquote class="border-l-4 border-primary/50 pl-4 py-2 my-4 bg-primary/5 rounded-r-lg italic text-foreground/80">$1</blockquote>');
+
   // H1
   html = html.replace(/^# (.*$)/gim, '<h1 class="text-3xl md:text-4xl font-display font-bold mt-8 mb-6 text-primary">$1</h1>');
   // H2
@@ -20,8 +42,8 @@ const renderMarkdown = (content: string) => {
   // Lists
   html = html.replace(/^\- (.*$)/gim, '<li class="ml-4 list-disc mb-2">$1</li>');
   // Paragraphs (anything that isn't a tag and isn't empty)
-  html = html.replace(/^(?!<[hl])(.+)$/gim, '<p class="mb-4 leading-relaxed text-foreground/90">$1</p>');
-  
+  html = html.replace(/^(?!<[a-z])(.+)$/gim, '<p class="mb-4 leading-relaxed text-foreground/90">$1</p>');
+
   return html;
 };
 
