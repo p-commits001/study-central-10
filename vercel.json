@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd artifacts/class10-hub && npm install && npm run build",
+  "outputDirectory": "artifacts/class10-hub/dist/public",
+  "installCommand": "npm install",
+  "framework": null
+}
