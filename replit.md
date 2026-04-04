@@ -54,6 +54,14 @@ A modern, full-stack CBSE Class 10 educational platform built by Priyanshu Tarao
 - `conversations` — AI chat sessions (id, title, created_at)
 - `messages` — Individual messages per conversation (id, conversation_id, role, content, created_at)
 
+## GitHub Repository
+
+- **Repo**: https://github.com/p-commits001/study-central-10
+- **Branch**: `main`
+- **Token**: Stored as `GITHUB_PAT` secret (classic PAT with `repo` scope, user: p-commits001)
+- **Note**: GitHub OAuth integration was dismissed; PAT is used instead via `GITHUB_PAT` secret.
+- To push future updates: `git push https://p-commits001:$GITHUB_PAT@github.com/p-commits001/study-central-10.git master:main`
+
 ## Environment Variables
 
 - `DATABASE_URL` — PostgreSQL connection string (auto-set by Replit)
