@@ -15,21 +15,27 @@ export default defineConfig(async () => {
   const plugins: any[] = [react(), tailwindcss()];
 
   if (isReplit) {
-    const runtimeErrorOverlay = await import(
-      "@replit/vite-plugin-runtime-error-modal"
-    ).then((m) => m.default);
-    plugins.push(runtimeErrorOverlay());
+    try {
+      const runtimeErrorOverlay = await import(
+        "@replit/vite-plugin-runtime-error-modal"
+      ).then((m) => m.default);
+      plugins.push(runtimeErrorOverlay());
+    } catch (_) {}
 
     if (!isProduction) {
-      const { cartographer } = await import(
-        "@replit/vite-plugin-cartographer"
-      );
-      plugins.push(
-        cartographer({ root: path.resolve(import.meta.dirname, "..") })
-      );
+      try {
+        const { cartographer } = await import(
+          "@replit/vite-plugin-cartographer"
+        );
+        plugins.push(
+          cartographer({ root: path.resolve(import.meta.dirname, "..") })
+        );
+      } catch (_) {}
 
-      const { devBanner } = await import("@replit/vite-plugin-dev-banner");
-      plugins.push(devBanner());
+      try {
+        const { devBanner } = await import("@replit/vite-plugin-dev-banner");
+        plugins.push(devBanner());
+      } catch (_) {}
     }
   }
 
@@ -50,7 +56,7 @@ export default defineConfig(async () => {
     },
     root: path.resolve(import.meta.dirname),
     build: {
-      outDir: path.resolve(import.meta.dirname, "dist/public"),
+      outDir: path.resolve(import.meta.dirname, "dist"),
       emptyOutDir: true,
     },
     server: {
