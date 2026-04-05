@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, BookOpen, Star, Download } from "lucide-react";
+import { staggerContainer, fadeUp, scaleIn, viewportOnce } from "@/lib/animations";
 
 interface NcertBook {
   subject: string;
@@ -147,7 +148,19 @@ export default function Books() {
       <div className="py-6 md:py-10">
 
         {/* Header */}
-        <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-10"
+        >
+          <motion.div
+            animate={{ rotate: [0, -8, 8, -8, 0] }}
+            transition={{ duration: 3, repeat: Infinity, repeatDelay: 4 }}
+            className="text-4xl mb-4"
+          >
+            📖
+          </motion.div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-3">
             <BookOpen size={14} /> Official NCERT Books
           </div>
@@ -155,8 +168,8 @@ export default function Books() {
             NCERT Books Class 10
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Download or read all official NCERT textbooks for CBSE Class 10 directly from <strong>ncert.nic.in</strong>.
-            Free, official, and 100% accurate.
+            Download or read all official NCERT textbooks for CBSE Class 10 directly from{" "}
+            <strong>ncert.nic.in</strong>. Free, official, and 100% accurate.
           </p>
         </motion.div>
 
@@ -164,32 +177,51 @@ export default function Books() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="bg-primary/5 border border-primary/20 rounded-2xl px-5 py-4 mb-8 flex items-start gap-3"
+          transition={{ delay: 0.2 }}
+          whileHover={{ scale: 1.01 }}
+          className="bg-primary/5 border border-primary/20 rounded-2xl px-5 py-4 mb-10 flex items-start gap-3"
         >
-          <Star size={18} className="text-primary mt-0.5 shrink-0" />
+          <motion.div
+            animate={{ rotate: [0, 10, -10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+          >
+            <Star size={18} className="text-primary mt-0.5 shrink-0" />
+          </motion.div>
           <p className="text-sm text-muted-foreground">
-            All books link to the official <strong className="text-foreground">NCERT website (ncert.nic.in)</strong>. 
-            You can read online, download chapters as PDFs, or download the entire book. 
+            All books link to the official{" "}
+            <strong className="text-foreground">NCERT website (ncert.nic.in)</strong>.
+            You can read online, download chapters as PDFs, or download the entire book.
             These are the same books used in CBSE exams — always study from NCERT first!
           </p>
         </motion.div>
 
         {/* Books Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {books.map((book, idx) => (
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-40px" }}
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
+        >
+          {books.map((book) => (
             <motion.div
               key={book.subject}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.05 }}
-              className="bg-card border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              variants={fadeUp}
+              whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
+              className="bg-card border border-border rounded-2xl overflow-hidden shadow-sm flex flex-col"
             >
               {/* Card header */}
-              <div className={`bg-gradient-to-r ${book.color} p-5 text-white`}>
-                <div className="flex items-start justify-between gap-3">
+              <div className={`bg-gradient-to-r ${book.color} p-5 text-white relative overflow-hidden`}>
+                <div className="absolute inset-0 opacity-20 animate-shimmer" />
+                <div className="flex items-start justify-between gap-3 relative z-10">
                   <div>
-                    <span className="text-3xl mb-2 block">{book.emoji}</span>
+                    <motion.span
+                      animate={{ scale: [1, 1.1, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                      className="text-3xl mb-2 block"
+                    >
+                      {book.emoji}
+                    </motion.span>
                     <div className="text-xs font-semibold uppercase tracking-wider opacity-80 mb-1">{book.subject}</div>
                     <h2 className="font-display font-bold text-base leading-tight">{book.title}</h2>
                   </div>
@@ -204,12 +236,19 @@ export default function Books() {
                 <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">Chapters</h3>
                 <div className="space-y-1.5">
                   {book.chapters.slice(0, 6).map((ch, i) => (
-                    <div key={ch} className="flex items-start gap-2 text-sm">
+                    <motion.div
+                      key={ch}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.04 }}
+                      className="flex items-start gap-2 text-sm"
+                    >
                       <span className="shrink-0 w-5 h-5 rounded-full bg-primary/10 text-primary text-xs flex items-center justify-center font-semibold mt-0.5">
                         {i + 1}
                       </span>
                       <span className="text-foreground/80 line-clamp-1">{ch}</span>
-                    </div>
+                    </motion.div>
                   ))}
                   {book.chapters.length > 6 && (
                     <div className="text-xs text-muted-foreground pl-7 pt-1">
@@ -221,39 +260,50 @@ export default function Books() {
 
               {/* CTA */}
               <div className="p-4 pt-0 flex gap-2">
-                <a
+                <motion.a
                   href={book.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-primary-foreground text-sm font-semibold"
                 >
                   <BookOpen size={15} /> Read Online
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                   href={book.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileTap={{ scale: 0.95 }}
                   className="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border border-border text-sm font-medium hover:bg-secondary transition-colors"
                   title="Download PDF"
                 >
                   <Download size={15} />
-                </a>
+                </motion.a>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Footer note */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          whileInView={{ opacity: 1 }}
+          viewport={viewportOnce}
+          transition={{ delay: 0.2 }}
           className="text-center mt-10 text-sm text-muted-foreground"
         >
           All books are sourced from the official NCERT portal.{" "}
-          <a href="https://ncert.nic.in" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
+          <motion.a
+            href="https://ncert.nic.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            className="text-primary hover:underline inline-flex items-center gap-1"
+          >
             Visit ncert.nic.in <ExternalLink size={12} />
-          </a>
+          </motion.a>
         </motion.div>
       </div>
     </div>

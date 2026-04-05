@@ -1,4 +1,4 @@
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,7 +6,6 @@ import { ThemeProvider } from "./components/theme-provider";
 import { Layout } from "./components/layout";
 import { AnimatePresence, motion } from "framer-motion";
 
-// Pages Imports
 import Home from "./pages/home";
 import NotesIndex from "./pages/notes-index";
 import NotesSubject from "./pages/notes-subject";
@@ -27,76 +26,106 @@ import Contact from "./pages/contact";
 
 const queryClient = new QueryClient();
 
-            
-            function Router() {
+const pageVariants = {
+  initial: { opacity: 0, y: 18 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.38, ease: [0.22, 1, 0.36, 1] } },
+  exit: { opacity: 0, y: -12, transition: { duration: 0.22, ease: "easeIn" } }
+};
+
+function AnimatedPage({ children }: { children: React.ReactNode }) {
+  return (
+    <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function Router() {
+  const [location] = useLocation();
+
   return (
     <Layout>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
+        <Switch key={location} location={location}>
 
-        <Route path="/">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <Home />
-          </motion.div>
-        </Route>
+          <Route path="/">
+            <AnimatedPage><Home /></AnimatedPage>
+          </Route>
 
-        <Route path="/notes">
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
-            <NotesIndex />
-          </motion.div>
-        </Route>
+          <Route path="/notes">
+            <AnimatedPage><NotesIndex /></AnimatedPage>
+          </Route>
 
-        <Route path="/notes/:subject">
-          <NotesSubject />
-        </Route>
+          <Route path="/notes/:subject/:chapter">
+            <AnimatedPage><NotesDetail /></AnimatedPage>
+          </Route>
 
-        <Route path="/notes/:subject/:chapter">
-          <NotesDetail />
-        </Route>
+          <Route path="/notes/:subject">
+            <AnimatedPage><NotesSubject /></AnimatedPage>
+          </Route>
 
-        <Route path="/ai-tutor">
-          <AiTutor />
-        </Route>
+          <Route path="/ai-tutor">
+            <AnimatedPage><AiTutor /></AnimatedPage>
+          </Route>
 
-        <Route path="/quiz">
-          <Quiz />
-        </Route>
+          <Route path="/quiz">
+            <AnimatedPage><Quiz /></AnimatedPage>
+          </Route>
 
-        <Route path="/questions">
-          <Questions />
-        </Route>
+          <Route path="/questions">
+            <AnimatedPage><Questions /></AnimatedPage>
+          </Route>
 
-        <Route path="/pdfs">
-          <Pdfs />
-        </Route>
+          <Route path="/pdfs">
+            <AnimatedPage><Pdfs /></AnimatedPage>
+          </Route>
 
-        <Route path="/tips">
-          <Tips />
-        </Route>
+          <Route path="/tips">
+            <AnimatedPage><Tips /></AnimatedPage>
+          </Route>
 
-        <Route path="/resources">
-          <Resources />
-        </Route>
+          <Route path="/books">
+            <AnimatedPage><Books /></AnimatedPage>
+          </Route>
 
-        <Route path="/about">
-          <About />
-        </Route>
+          <Route path="/recommended-books">
+            <AnimatedPage><RecommendedBooks /></AnimatedPage>
+          </Route>
 
-        <Route path="/contact">
-          <Contact />
-        </Route>
+          <Route path="/resources">
+            <AnimatedPage><Resources /></AnimatedPage>
+          </Route>
 
-        <Route path="/privacy-policy">
-          <PrivacyPolicy />
-        </Route>
+          <Route path="/about">
+            <AnimatedPage><About /></AnimatedPage>
+          </Route>
 
-        <Route path="/disclaimer">
-          <Disclaimer />
-        </Route>
+          <Route path="/contact">
+            <AnimatedPage><Contact /></AnimatedPage>
+          </Route>
 
+          <Route path="/privacy-policy">
+            <AnimatedPage><PrivacyPolicy /></AnimatedPage>
+          </Route>
+
+          <Route path="/disclaimer">
+            <AnimatedPage><Disclaimer /></AnimatedPage>
+          </Route>
+
+          <Route path="/search">
+            <AnimatedPage><SearchPage /></AnimatedPage>
+          </Route>
+
+        </Switch>
       </AnimatePresence>
     </Layout>
   );
-            }
+}
 
 function App() {
   return (

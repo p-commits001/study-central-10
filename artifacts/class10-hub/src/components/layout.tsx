@@ -5,7 +5,7 @@ import {
   Menu, X, GraduationCap, Instagram, User, Sparkles, 
   BookOpen, Brain, MessageSquare, Info, ShieldCheck, 
   AlertTriangle, Lightbulb, Download, ChevronRight, LogIn,
-  ClipboardCheck, LogOut
+  ClipboardCheck, LogOut, Mail
 } from "lucide-react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 
@@ -149,13 +149,25 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 bg-secondary rounded-lg"><X size={20} /></button>
               </div>
               <nav className="flex flex-col gap-1">
-                {menuItems.map((item) => (
-                  <Link key={item.label} href={item.href}>
-                    <div onClick={() => setIsMobileMenuOpen(false)} className={`flex items-center gap-4 p-4 rounded-xl cursor-pointer transition-all ${location === item.href ? 'bg-primary text-white' : 'hover:bg-primary/10'}`}>
-                      <item.icon size={20} />
-                      <span className="font-bold text-sm">{item.label}</span>
-                    </div>
-                  </Link>
+                {menuItems.map((item, i) => (
+                  <motion.div
+                    key={item.label}
+                    initial={{ opacity: 0, x: 30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05, type: "spring", stiffness: 300, damping: 25 }}
+                  >
+                    <Link href={item.href}>
+                      <motion.div
+                        whileHover={{ x: 4 }}
+                        whileTap={{ scale: 0.97 }}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`flex items-center gap-4 p-4 rounded-xl cursor-pointer transition-all ${location === item.href ? 'bg-primary text-white' : 'hover:bg-primary/10'}`}
+                      >
+                        <item.icon size={20} />
+                        <span className="font-bold text-sm">{item.label}</span>
+                      </motion.div>
+                    </Link>
+                  </motion.div>
                 ))}
               </nav>
               <div className="mt-auto pt-8 border-t space-y-4">
@@ -174,16 +186,39 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       <main className="flex-1 pt-20">{children}</main>
 
-      <footer className="py-12 bg-card/50 border-t text-center">
+      <motion.footer
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="py-12 bg-card/50 border-t text-center"
+      >
         <div className="container mx-auto px-4">
-          <AlertTriangle className="mx-auto mb-4 text-yellow-500 opacity-50" size={20} />
-          <p className="text-xs font-bold opacity-30 uppercase tracking-widest">Target 2026 Board Exams</p>
-          <div className="mt-4 flex justify-center gap-4">
+          <motion.div
+            animate={{ rotate: [0, -5, 5, -5, 0] }}
+            transition={{ duration: 3, repeat: Infinity, repeatDelay: 5 }}
+          >
+            <AlertTriangle className="mx-auto mb-4 text-yellow-500 opacity-50" size={20} />
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-xs font-bold opacity-30 uppercase tracking-widest"
+          >
+            Target 2026 Board Exams
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="mt-4 flex justify-center gap-4"
+          >
             <ShieldCheck size={16} className="text-primary opacity-50" />
             <span className="text-[10px] font-bold opacity-30">100% Safe & Secure Learning</span>
-          </div>
+          </motion.div>
         </div>
-      </footer>
+      </motion.footer>
     </div>
   );
 }

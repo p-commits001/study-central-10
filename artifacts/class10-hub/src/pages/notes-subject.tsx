@@ -40,18 +40,22 @@ export default function NotesSubject() {
           </div>
         </motion.div>
 
-        <div className="space-y-4">
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}
+          className="space-y-4"
+        >
           {chapters.map((chapter, idx) => {
             const isExpanded = expandedId === chapter.id;
             
             return (
               <motion.div
                 key={chapter.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.05 }}
-                className={`bg-card border rounded-2xl overflow-hidden transition-all duration-300 ${
-                  isExpanded ? 'border-primary shadow-md' : 'border-border hover:border-primary/50 hover:shadow-sm'
+                variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
+                whileHover={!isExpanded ? { x: 3 } : {}}
+                className={`bg-card border rounded-2xl overflow-hidden transition-colors duration-300 ${
+                  isExpanded ? 'border-primary shadow-md shadow-primary/10' : 'border-border hover:border-primary/50 hover:shadow-sm'
                 }`}
               >
                 <div 
@@ -59,9 +63,12 @@ export default function NotesSubject() {
                   onClick={() => setExpandedId(isExpanded ? null : chapter.id)}
                 >
                   <div className="flex gap-4 items-center">
-                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center font-bold text-muted-foreground shrink-0">
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      className={`w-10 h-10 rounded-full flex items-center justify-center font-bold shrink-0 transition-colors ${isExpanded ? 'bg-primary text-white' : 'bg-secondary text-muted-foreground'}`}
+                    >
                       {idx + 1}
-                    </div>
+                    </motion.div>
                     <div>
                       <h3 className={`text-lg md:text-xl font-bold font-display transition-colors ${isExpanded ? 'text-primary' : ''}`}>
                         {chapter.title}
@@ -98,7 +105,7 @@ export default function NotesSubject() {
               </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
