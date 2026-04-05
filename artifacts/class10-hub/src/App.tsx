@@ -15,6 +15,7 @@ import Pdfs from "./pages/pdfs";
 import Tips from "./pages/tips";
 import SearchPage from "./pages/search";
 import AiTutor from "./pages/ai-tutor";
+import AiImage from "./pages/ai-image";
 import About from "./pages/about";
 import Books from "./pages/books";
 import RecommendedBooks from "./pages/recommended-books";
@@ -71,6 +72,10 @@ function Router() {
 
           <Route path="/ai-tutor">
             <AnimatedPage><AiTutor /></AnimatedPage>
+          </Route>
+
+          <Route path="/ai-image">
+            <AnimatedPage><AiImage /></AnimatedPage>
           </Route>
 
           <Route path="/quiz">

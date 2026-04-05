@@ -16,30 +16,70 @@ export const CHAPTERS: Record<string, { id: string; title: string; description: 
     { id: "m4", title: "Quadratic Equations", description: "Standard form, Solution by factorization and quadratic formula" },
     { id: "m5", title: "Arithmetic Progressions", description: "nth term and sum of first n terms of an AP" },
     { id: "m6", title: "🔥 Trigonometry Table — Hand Trick (Viral)", description: "Sin, Cos, Tan values yaad karo sirf 1 minute mein — Left Hand Rule se!" },
+    { id: "m7", title: "Triangles", description: "Similar triangles, Pythagoras theorem, criteria for similarity" },
+    { id: "m8", title: "Coordinate Geometry", description: "Distance formula, Section formula, Area of triangle" },
+    { id: "m9", title: "Circles", description: "Tangent to a circle, number of tangents from a point" },
+    { id: "m10", title: "Areas Related to Circles", description: "Area of sector, segment, and combinations" },
+    { id: "m11", title: "Surface Areas and Volumes", description: "Combinations of solids, frustum of a cone" },
+    { id: "m12", title: "Statistics", description: "Mean, Median, Mode of grouped data, cumulative frequency" },
+    { id: "m13", title: "Probability", description: "Classical definition, simple problems on single events" },
   ],
   science: [
     { id: "s1", title: "Chemical Reactions and Equations", description: "Types of chemical reactions, balancing equations" },
     { id: "s2", title: "Acids, Bases and Salts", description: "Properties of acids and bases, pH scale, salts" },
     { id: "s3", title: "Metals and Non-metals", description: "Physical and chemical properties, extraction of metals" },
-    { id: "s4", title: "Life Processes", description: "Nutrition, respiration, transportation, and excretion" },
-    { id: "s5", title: "Light - Reflection and Refraction", description: "Spherical mirrors, lenses, refractive index" },
+    { id: "s4", title: "Carbon and its Compounds", description: "Covalent bonds, functional groups, homologous series" },
+    { id: "s5", title: "Life Processes", description: "Nutrition, respiration, transportation, and excretion" },
+    { id: "s6", title: "Control and Coordination", description: "Nervous system, hormones, reflex action" },
+    { id: "s7", title: "How do Organisms Reproduce?", description: "Sexual and asexual reproduction in plants and animals" },
+    { id: "s8", title: "Heredity and Evolution", description: "Mendel's laws, sex determination, evolution" },
+    { id: "s9", title: "Light – Reflection and Refraction", description: "Spherical mirrors, lenses, refractive index" },
+    { id: "s10", title: "🔥 Human Eye and Colourful World", description: "Eye anatomy, defects of vision, dispersion of light, rainbow" },
+    { id: "s11", title: "Electricity", description: "Ohm's law, resistance, series & parallel circuits, heating effect" },
+    { id: "s12", title: "Magnetic Effects of Electric Current", description: "Magnetic field, Fleming's rule, electric motor, generator" },
+    { id: "s13", title: "Our Environment", description: "Ecosystem, food chain, ozone depletion" },
+    { id: "s14", title: "Management of Natural Resources", description: "Conservation, water harvesting, coal and petroleum" },
   ],
   english: [
     { id: "e1", title: "A Letter to God", description: "Faith, hope, and the human spirit" },
     { id: "e2", title: "Nelson Mandela: Long Walk to Freedom", description: "Struggle for justice and equality" },
     { id: "e3", title: "Two Stories about Flying", description: "Overcoming fear and finding courage" },
     { id: "e4", title: "From the Diary of Anne Frank", description: "A young girl's perspective during WWII" },
+    { id: "e5", title: "Glimpses of India", description: "Three-part story on Indian culture and heritage" },
+    { id: "e6", title: "Mijbil the Otter", description: "Gavin Maxwell's pet otter — humour and compassion" },
+    { id: "e7", title: "Madam Rides the Bus", description: "A little girl's first bus journey — wonder and reality" },
+    { id: "e8", title: "The Sermon at Benares", description: "Lord Buddha's teachings on grief and acceptance" },
+    { id: "e9", title: "The Proposal (Play)", description: "Anton Chekov's comic one-act play about marriage" },
+    { id: "e10", title: "Dust of Snow (Poem)", description: "A crow and a hemlock tree change the poet's mood" },
+    { id: "e11", title: "Fire and Ice (Poem)", description: "Frost's poem about the end of the world" },
+    { id: "e12", title: "A Tiger in the Zoo (Poem)", description: "Contrast between wild freedom and cage life" },
   ],
   sst: [
     { id: "ss1", title: "The Rise of Nationalism in Europe", description: "French revolution, making of Germany and Italy" },
     { id: "ss2", title: "Nationalism in India", description: "Non-cooperation movement, Civil Disobedience" },
-    { id: "ss3", title: "Resources and Development", description: "Types of resources, land and soil resources" },
-    { id: "ss4", title: "Power Sharing", description: "Case studies of Belgium and Sri Lanka" },
+    { id: "ss3", title: "The Making of a Global World", description: "Silk routes, trade, Great Depression" },
+    { id: "ss4", title: "The Age of Industrialisation", description: "Proto-industrialisation, factories, working conditions" },
+    { id: "ss5", title: "Print Culture and the Modern World", description: "History of print, newspapers, impact on society" },
+    { id: "ss6", title: "Resources and Development", description: "Types of resources, land and soil resources" },
+    { id: "ss7", title: "Forest and Wildlife Resources", description: "Conservation, types of forests, biodiversity" },
+    { id: "ss8", title: "Water Resources", description: "Dams, water scarcity, rainwater harvesting" },
+    { id: "ss9", title: "Agriculture", description: "Types of farming, cropping patterns, food security" },
+    { id: "ss10", title: "Power Sharing", description: "Case studies of Belgium and Sri Lanka" },
+    { id: "ss11", title: "Federalism", description: "Types of federalism, linguistic states, decentralisation" },
+    { id: "ss12", title: "Democracy and Diversity", description: "Social divisions, politics, examples from India & abroad" },
+    { id: "ss13", title: "Money and Credit", description: "Formal and informal sources, credit, banks" },
+    { id: "ss14", title: "Globalisation and the Indian Economy", description: "MNCs, WTO, impact on India" },
   ],
   hindi: [
     { id: "h1", title: "Surdas ke Pad", description: "Devotional poetry by Surdas" },
     { id: "h2", title: "Ram-Lakshman-Parashuram Samvad", description: "Extract from Ramcharitmanas" },
     { id: "h3", title: "Utsah, Aat Nahi Rahi Hai", description: "Poems by Suryakant Tripathi Nirala" },
+    { id: "h4", title: "Yeh Danturit Muskan", description: "Nagarjun's poem — a child's smile and its effect" },
+    { id: "h5", title: "Manushyata", description: "Maithili Sharan Gupt — humanity and brotherhood" },
+    { id: "h6", title: "Balgobin Bhagat", description: "Ramvriksh Benipuri — a simple saint's life" },
+    { id: "h7", title: "Lakhnawi Andaaz", description: "Yashpal's humorous story — cultural pride vs reality" },
+    { id: "h8", title: "Ek Kahani Yeh Bhi", description: "Mannu Bhandari — feminism and self-discovery" },
+    { id: "h9", title: "Sangatkar", description: "Mangle Biswa's poem — the unsung supporters" },
   ]
 };
 
@@ -51,15 +91,42 @@ export const NOTES_CONTENT: Record<string, string> = {
 Real numbers constitute the union of all rational and irrational numbers. They can be represented on a number line.
 
 ## Euclid's Division Lemma
-Given positive integers a and b, there exist unique integers q and r satisfying a = bq + r, 0 ≤ r < b.
+Given positive integers a and b, there exist unique integers q and r satisfying **a = bq + r**, where 0 ≤ r < b.
 This lemma is essentially a restatement of the long division process.
 
+**Algorithm (HCF nikalna):**
+1. c = a × b + r likho
+2. Ab c ki jagah a lo, a ki jagah r lo
+3. Tab tak karo jab tak r = 0 na ho jaye
+4. Jo b bacha wahi HCF hai
+
+**Example:** HCF(135, 225)
+> 225 = 135 × 1 + 90
+> 135 = 90 × 1 + 45
+> 90 = 45 × 2 + 0 → HCF = **45**
+
 ## The Fundamental Theorem of Arithmetic
-Every composite number can be expressed (factorised) as a product of primes, and this factorisation is unique, apart from the order in which the prime factors occur.
+Every composite number can be expressed (factorised) as a **product of primes**, and this factorisation is unique.
 
 **Key Formula:**
-For any two positive integers a and b, HCF(a,b) × LCM(a,b) = a × b.
+> HCF(a,b) × LCM(a,b) = a × b
+
+## Rational vs Irrational Numbers
+
+| Type | Example | Decimal |
+|------|---------|---------|
+| Rational | 3/4 | 0.75 (terminating) |
+| Rational | 1/3 | 0.333... (repeating) |
+| Irrational | √2 | 1.41421... (non-terminating, non-repeating) |
+
+**Denominator Rule:** p/q (lowest terms) terminates only if q = 2^m × 5^n.
+
+## 📌 Board Exam Tips
+- Euclid's Division Lemma aur HCF proof har saal aata hai
+- √2, √3, √5 irrational hain — proof karna padhta hai (3 marks)
+- LCM × HCF = Product of numbers (only for TWO numbers)
   `,
+
   m6: `
 # 🔥 Trigonometry Table Yaad Karne ki Short Trick (1 Minute Mein!)
 
@@ -106,12 +173,8 @@ Apna **baaya haath** saamne rakho. Ab fingers ko angles assign karo:
 **Tip 2 — tan ke liye:** tan θ = sin θ / cos θ — bas divide karo, ho gaya!
 
 **Tip 3 — "Some People Have Curly Brown Hair"**
-- **S**ome = **S**in
-- **P**eople = **P**erpendicular (opposite side)
-- **H**ave = **H**ypotenuse
-- **C**urly = **C**os
-- **B**rown = **B**ase
-- **H**air = **H**ypotenuse
+- **S**ome = **S**in, **P**eople = **P**erpendicular, **H**ave = **H**ypotenuse
+- **C**urly = **C**os, **B**rown = **B**ase, **H**air = **H**ypotenuse
 
 ## ✅ Practice Questions (Board Exam Style)
 
@@ -124,25 +187,283 @@ Apna **baaya haath** saamne rakho. Ab fingers ko angles assign karo:
 **Q3.** 2sin30° + 3cos60° − tan45° ka maan gyat karo. *(2 marks)*
 > Answer: 2(1/2) + 3(1/2) − 1 = 1 + 1.5 − 1 = **1.5**
 
-## 📥 Full Table PDF Download Karo
-
-Neeche Resources section mein jaake **Trigonometry Table PDF** download karo — printout lo aur room mein chipka do!
-
 > 💡 **Pro Tip:** Roz subah uthke table ko ek baar dekho. 7 din mein pakki ho jayegi!
   `,
+
+  m7: `
+# Triangles
+
+## Similar Triangles kya hote hain?
+Do triangles **similar** hote hain jab:
+- Unke corresponding angles equal hon (AAA criterion)
+- Unke corresponding sides same ratio mein hon (SSS criterion)
+- Do sides same ratio mein hon aur included angle equal ho (SAS criterion)
+
+## Basic Proportionality Theorem (Thales' Theorem)
+Agar ek line ek triangle ki do sides ko same ratio mein divide kare, toh woh line teesri side ke parallel hoti hai.
+
+> **Formula:** DE ∥ BC hai toh AD/DB = AE/EC
+
+## Pythagoras Theorem
+Right triangle mein:
+> **c² = a² + b²** (c = hypotenuse)
+
+**Converse:** Agar c² = a² + b² ho, toh triangle right-angled hai.
+
+## Pythagorean Triplets (Yaad Karo!)
+| Triplet |
+|---------|
+| 3, 4, 5 |
+| 5, 12, 13 |
+| 8, 15, 17 |
+| 7, 24, 25 |
+
+## 📌 Board Exam Important Points
+- BPT ka proof 3 marks ka aata hai — zaroor padho
+- Similar triangles ke ratio of areas = (ratio of sides)²
+- Criteria: AA, SAS, SSS similarity
+  `,
+
   s1: `
 # Chemical Reactions and Equations
 
 ## Physical vs Chemical Changes
-- **Physical Change**: A change in state or appearance without forming a new substance (e.g., melting of ice).
-- **Chemical Change**: A change where one or more new substances are formed with entirely different properties (e.g., rusting of iron, burning of wood).
+- **Physical Change**: State ya appearance change hoti hai, naya substance nahi banta (e.g., ice ka paani banana).
+- **Chemical Change**: Bilkul naya substance banta hai (e.g., iron ka rusting, wood ka jalna).
 
 ## Chemical Equations
-A chemical equation is the symbolic representation of a chemical reaction in the form of symbols and formulae.
-*Reactants* are written on the left side, and *Products* on the right side.
+Reactants → Products (ke roop mein likhte hain)
 
-## Balancing Chemical Equations
-The law of conservation of mass states that mass can neither be created nor destroyed in a chemical reaction. Therefore, the number of atoms of each element must be the same on both sides of the equation.
+**Balancing Rule:** Mass conservation ka niyam — dono sides par atoms ki sankhya equal honi chahiye.
+
+## Types of Chemical Reactions
+
+| Type | Definition | Example |
+|------|-----------|---------|
+| Combination | A + B → AB | 2H₂ + O₂ → 2H₂O |
+| Decomposition | AB → A + B | 2H₂O → 2H₂ + O₂ |
+| Displacement | A + BC → AC + B | Zn + H₂SO₄ → ZnSO₄ + H₂ |
+| Double Displacement | AB + CD → AD + CB | NaCl + AgNO₃ → NaNO₃ + AgCl |
+| Redox | Oxidation + Reduction saath mein | CuO + H₂ → Cu + H₂O |
+
+## Exothermic vs Endothermic
+- **Exothermic:** Heat release hoti hai (e.g., combustion, respiration)
+- **Endothermic:** Heat absorb hoti hai (e.g., cooking, photosynthesis)
+
+## Oxidation and Reduction (OIL RIG)
+> **O**xidation **I**s **L**oss (of electrons)
+> **R**eduction **I**s **G**ain (of electrons)
+
+## 📌 Board Exam Tips
+- Decomposition reactions 3 types ki hoti hain: thermal, electrolytic, photolytic
+- Rancidity = oxidation of fats — antioxidants se rokti hai
+- Corrosion = surface ka oxidation (iron ka rust = Fe₂O₃.xH₂O)
+  `,
+
+  s10: `
+# 🔥 Human Eye and the Colourful World
+
+## 1. Human Eye ki Main Parts aur Unka Kaam
+
+Hamaari aankhein ek natural camera ki tarah hain. Iske main parts neeche diye gaye hain:
+
+- **Cornea:** Aankhon ka sabse baahri transparent layer hai jis par light pehle enter karti hai.
+- **Iris & Pupil:** Iris is aankhon ka rang karney wala part hai aur Pupil control karta hai ki kitni light andar jayegi.
+- **Ciliary Muscles:** Ye sabse zaruri hain! Lens ki focal length ko badhalti hain — **Accommodation** isi se hota hai.
+- **Retina:** Ye aankhon ki "Screen" hai jahan image banti hai.
+- **Optic Nerve:** Retina se brain tak image ka signal bhejta hai.
+- **Blind Spot:** Jahan optic nerve retina se milti hai — wahan koi rod/cone cells nahi hote, isliye koi image nahi banti.
+
+## 2. Accommodation (Aankhon ki Power)
+
+**Accommodation** = Ciliary muscles aankhon ki focal length ko adjust karne ki power.
+
+- **Near object dekhte waqt:** Ciliary muscles contract karti hain → Lens thick hota hai → focal length kam hoti hai
+- **Far object dekhte waqt:** Ciliary muscles relax hoti hain → Lens thin hota hai → focal length zyada hoti hai
+
+**Near Point (Nikatum Bindu):** = 25 cm (normal aankhon ke liye)
+**Far Point (Duurasth Bindu):** = Infinity (normal aankhon ke liye)
+
+## 3. Defects of Vision (Aankhon ki Bimariyan)
+
+| Defect (Bimari) | Kya hota hai? | Kaise theek hoti hai? |
+|-----------------|---------------|----------------------|
+| **Myopia** (Near-sightedness) | Paas ka dikhta hai, door ka nahi | **Concave lens** |
+| **Hypermetropia** (Far-sightedness) | Door ka dikhta hai, paas ka nahi | **Convex lens** |
+| **Presbyopia** | Budhaape mein dono dikhai dena band | **Bi-focal lens** |
+| **Astigmatism** | Aadha-aadha dhundhla | **Cylindrical lens** |
+
+### Myopia (Nikatudrushti) — Kyu Hota Hai?
+1. Eyeball ki length zyada lambi ho jaati hai, ya
+2. Cornea/lens ki curvature zyada zyada ho jaati hai
+→ Image retina ke AAGE ban jaati hai
+→ **Fix:** Concave (Apasaari) lens use karo
+
+### Hypermetropia (Duurdrushti) — Kyu Hota Hai?
+1. Eyeball ki length chhoti ho jaati hai, ya
+2. Focal length zyada lambi ho jaati hai
+→ Image retina ke PEECHHEY banegi
+→ **Fix:** Convex (Abhisaari) lens use karo
+
+## 4. Atmospheric Refraction (Aisa Kyun Hota Hai?)
+
+**Science ko luch:** Atmosphere mein alag-alag layers mein light baar-baar bend karti hai.
+
+- **Twinkling of Stars (Taaron ka timmimana):** Aasman mein puri raat taare timmimate hain kyunki atmosphere ki alag-alag layers mein light bar-bar refract hoti rehti hai.
+- **Planets do not twinkle:** Planets hamare zyada paas hain — extended source hote hain, isliye net deviation near zero hota hai.
+- **Sun dikh jaata hai 2 minute pehle:** Atmosphere refracts karta hai — actually sun horizon ke neeche hota hai par hume dikh raha hota hai.
+- **Tyndall Effect:** Jab dhool (dust particles) se takra ke light phailti hai (scattering) — yahi Rainbow, Blue Sky, Red Sunset ka reason hai.
+
+## 5. Scattering of Light — Rainbow aur Rang
+
+**Prism se Dispersion:** White light prism se VIBGYOR mein split hoti hai:
+> **V**iolet, **I**ndigo, **B**lue, **G**reen, **Y**ellow, **O**range, **R**ed
+
+**Rainbow kaise banta hai?**
+1. Sun ki light water droplets mein enter karti hai
+2. Refraction → Dispersion → Total Internal Reflection → Refraction phir
+3. VIBGYOR rang dikhte hain (Violet andar, Red bahar)
+
+**Blue Sky kyun hai?**
+> Rayleigh Scattering: Blue light (chhota wavelength) zyada scatter hoti hai atmosphere mein.
+
+**Red Sunset/Sunrise kyun hota hai?**
+> Sun horizon par hota hai → light ko zyada atmosphere travel karna padta hai → Blue scatter ho jaata hai → Only Red/Orange bacha
+
+## 📌 Board Exam ke Liye Super Important
+
+- **Accommodation** = Ciliary muscles ki power — MUST KNOW
+- Myopia → Concave, Hypermetropia → Convex — guaranteed question
+- Tyndall Effect = scattering of light by colloidal particles
+- Power of lens formula: **P = 1/f** (f meters mein, P Dioptre mein)
+- Human eye ki least distance of distinct vision = **25 cm**
+  `,
+
+  s9: `
+# Light – Reflection and Refraction
+
+## Laws of Reflection
+1. Angle of incidence = Angle of reflection (∠i = ∠r)
+2. Incident ray, reflected ray, and normal — teeno ek hi plane mein hote hain.
+
+## Types of Mirrors
+
+| Mirror | Image Type | Uses |
+|--------|-----------|------|
+| Concave | Real + Inverted (mostly) | Dentist's mirror, torches, solar furnaces |
+| Convex | Virtual + Erect + Diminished | Rear-view mirrors |
+| Plane | Virtual + Erect + Same size | Dressing mirrors |
+
+## Mirror Formula
+> **1/v + 1/u = 1/f**
+
+> **Magnification m = -v/u = h'/h**
+
+**Sign Convention:** Object always on LEFT, distances left = negative, right = positive.
+
+## Refraction of Light
+Light ek medium se doosre medium mein jaate waqt bend hoti hai — ise **Refraction** kehte hain.
+
+## Snell's Law
+> **n₁ sin θ₁ = n₂ sin θ₂**
+
+> **n = c/v** (refractive index = speed of light in vacuum / speed in medium)
+
+## Lenses
+
+| Lens | Image | Use |
+|------|-------|-----|
+| Convex (Converging) | Real + Inverted (mostly) | Magnifying glass, eye |
+| Concave (Diverging) | Virtual + Erect + Small | Spectacles for myopia |
+
+**Lens Formula:** 1/v - 1/u = 1/f
+
+**Power of Lens:** P = 1/f (f in metres, P in Dioptre D)
+
+## 📌 Board Tips
+- Mirror formula same hai Lens formula se — dhyan se use karo signs
+- Concave mirror uses: TEETH (solar furnace, shaving, headlights, dentist)
+- Convex mirror uses: rear-view (wide field of view)
+  `,
+
+  ss1: `
+# The Rise of Nationalism in Europe
+
+## French Revolution (1789) — Seed of Nationalism
+- France mein "La Patrie" (the fatherland) aur "Le Citoyen" (the citizen) ki concept aayi
+- Tricolour flag, Marseillaise (national anthem) — nationalist symbols banaye gaye
+- Revolutionary armies poore Europe mein nationalism ka idea phailayi
+
+## Napoleon Bonaparte's Role
+- Napoleon ne Europe ke laws unify kiye — **Napoleonic Code**
+- Feudalism khatam kiya, peasants ko azaadi di
+- BUT: Napoleon ne bhi baaki nations par raj kiya → Counter-nationalism jaaga
+
+## The Conservative Order (1815 — Congress of Vienna)
+- Napoleon ke haarne ke baad **conservative powers** (Britain, Prussia, Russia, Austria) ne Europe ki map phir se banayi
+- **Metternich** (Austria ka diplomat) = liberalism ka dushman
+
+## Romanticism — Ek Nationalist Idea
+- Art, poetry, music ne nationalism ko feel karaya
+- Painters ne battle scenes aur national heroes banaye
+- **Johann Gottfried Herder** (Germany) ne "volk" (people) ki concept di
+
+## Unification of Germany
+1. **Otto von Bismarck** = Prussia ka chancellor — "Blood and Iron" policy
+2. Teen wars (Denmark, Austria, France) jeetke Germany unify kiya
+3. 1871 — **German Empire** proclaimed at Versailles
+
+## Unification of Italy
+1. **Mazzini** — Young Italy movement — Republican Italy ka sapna
+2. **Garibaldi** — Red Shirts army ke saath south Italy jeeta
+3. **Cavour** — Diplomatic mastermind
+4. 1861 — Italy unified, **Victor Emmanuel II** pehle king
+
+## Nationalism in the Balkans
+- Ottoman Empire ka collapse → Balkan states mein independence movements
+- Russia vs Austria-Hungary → **"Powder Keg of Europe"**
+- Result: **World War I** ki buniyaad
+
+## 📌 Board Exam Key Points
+- Frederic Sorrieu ka 1848 ka utopian vision = Democratic and Social Republics
+- Ernst Moritz Arndt = German nationalist poet
+- Frankfurt Parliament 1848 = first liberal nationalist movement (failed)
+- **Zollverein** = German custom union (economic nationalism)
+  `,
+
+  e1: `
+# A Letter to God
+
+## Summary
+Lencho ek kisan hai jo apni crops ke liye God par bahut bharosa karta hai. Ek toofan se uski poori fasal barbad ho jaati hai. Woh God ko ek letter likhta hai 100 pesos maangne ke liye. Post office ke log letter padh ke hasdte hain, phir mil-julke 70 pesos collect karke bhejte hain. Lencho jab sirf 70 pesos milte hain toh woh phir se likhta hai ki "baaki paise mat bhejo — woh log bahut bure hain (post office workers)."
+
+## Characters
+- **Lencho** — Kisan, God par pure bharosa rakhne wala
+- **Postmaster** — Insaan ki achhaai ka pratik
+
+## Themes
+1. **Faith / Vishwas** — Lencho ka God par complete trust
+2. **Human Kindness** — Post office workers ki madad
+3. **Irony** — Jo log madad karte hain unhe hi Lencho chor samajhta hai
+
+## Important Quotes
+> "Lencho showed not the slightest surprise on seeing the money; such was his confidence."
+
+> "God could not have made a mistake, nor could He have denied Lencho what he had requested."
+
+## Literary Devices
+- **Irony:** Lencho God par trust karta hai par insanon par nahi
+- **Personification:** Locusts described as "a plague of locusts"
+- **Metaphor:** Coins = drops of new silver
+
+## Grammar Focus
+- Past Perfect Tense examples from the chapter
+- Reported Speech: "He said that God could not..."
+
+## 📌 Board Exam Important
+- "What does Lencho mean by 'a plague of locusts'?" — 2 mark answer
+- Character sketch of Postmaster (100 words) — 5 marks
+- Theme of faith and irony — guaranteed question
   `,
 };
 
@@ -167,7 +488,38 @@ export const QUESTIONS: Record<string, { id: string; text: string; marks: number
     { id: "q_s1_3", text: "What is a balanced chemical equation? Why should chemical equations be balanced?", marks: 3, year: "2018" },
     { id: "q_s1_4", text: "Why is respiration considered an exothermic reaction? Explain.", marks: 2, year: "2021" },
     { id: "q_s1_5", text: "Write the balanced chemical equation for the reaction of Barium chloride with Aluminium sulphate.", marks: 2, year: "NCERT" },
-  ]
+  ],
+  s10: [
+    { id: "q_s10_1", text: "What is meant by 'power of accommodation' of an eye?", marks: 2, year: "2023" },
+    { id: "q_s10_2", text: "A student cannot see clearly objects at a distance greater than 5 m. What is the defect of vision and how can it be corrected?", marks: 3, year: "2022" },
+    { id: "q_s10_3", text: "Explain with a diagram why the sky appears blue during the day but the horizon appears red during sunset.", marks: 5, year: "2022" },
+    { id: "q_s10_4", text: "Why do stars twinkle but planets do not?", marks: 2, year: "2021" },
+    { id: "q_s10_5", text: "Draw a ray diagram to show the formation of a rainbow.", marks: 3, year: "2020" },
+    { id: "q_s10_6", text: "What is Tyndall Effect? Give two examples from daily life.", marks: 2, year: "2023" },
+    { id: "q_s10_7", text: "An elderly person can read a book only when it is held at 60 cm or more. What is the defect of vision? Which lens is used to correct it?", marks: 3, year: "2019" },
+    { id: "q_s10_8", text: "List three differences between Myopia and Hypermetropia.", marks: 3, year: "2021" },
+  ],
+  s9: [
+    { id: "q_s9_1", text: "A concave mirror produces three times magnified image on a screen. If object is placed 10 cm in front of mirror, how far is the screen from the mirror?", marks: 3, year: "2022" },
+    { id: "q_s9_2", text: "Why does a ray of light bend when it travels from one medium to another?", marks: 2, year: "2021" },
+    { id: "q_s9_3", text: "Find the focal length of a convex lens if it forms a real image at 30 cm with object at 15 cm.", marks: 3, year: "2020" },
+    { id: "q_s9_4", text: "State the laws of reflection of light.", marks: 2, year: "2019" },
+    { id: "q_s9_5", text: "Distinguish between real image and virtual image.", marks: 2, year: "2023" },
+  ],
+  ss1: [
+    { id: "q_ss1_1", text: "Explain the role of Otto von Bismarck in the unification of Germany.", marks: 5, year: "2022" },
+    { id: "q_ss1_2", text: "What was the significance of the French Revolution for the rise of nationalism in Europe?", marks: 3, year: "2021" },
+    { id: "q_ss1_3", text: "What is Zollverein? How did it help in German unification?", marks: 2, year: "2020" },
+    { id: "q_ss1_4", text: "Describe the role of Giuseppe Mazzini in Italian unification.", marks: 3, year: "2019" },
+    { id: "q_ss1_5", text: "Who were 'Liberals', 'Radicals', and 'Conservatives'? How did they differ?", marks: 3, year: "2023" },
+  ],
+  e1: [
+    { id: "q_e1_1", text: "What does Lencho mean when he says the rain was 'a plague of locusts'?", marks: 2, year: "2022" },
+    { id: "q_e1_2", text: "Write a character sketch of the postmaster in 'A Letter to God'.", marks: 5, year: "2021" },
+    { id: "q_e1_3", text: "What is the central theme of 'A Letter to God'? Explain with examples.", marks: 5, year: "2023" },
+    { id: "q_e1_4", text: "Why did the post office employees call Lencho an 'ox of a man'?", marks: 1, year: "2020" },
+    { id: "q_e1_5", text: "What was the irony in Lencho's second letter to God?", marks: 3, year: "2019" },
+  ],
 };
 
 export const PDFS = [
