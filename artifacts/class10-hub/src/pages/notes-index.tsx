@@ -3,12 +3,14 @@ import { Link } from "wouter";
 import { SUBJECTS, CHAPTERS } from "@/lib/mock-data";
 import { Calculator, FlaskConical, BookOpen, Globe, Languages, ChevronRight, BookText } from "lucide-react";
 import { staggerContainer, fadeUp, scaleIn, viewportOnce } from "@/lib/animations";
+import { useSEO, SEO_DATA } from "@/lib/useSEO";
 
 const iconMap: Record<string, React.ElementType> = {
   Calculator, FlaskConical, BookOpen, Globe, Languages
 };
 
 export default function NotesIndex() {
+  useSEO(SEO_DATA.notes);
   return (
     <div className="container mx-auto px-4 md:px-6 max-w-5xl">
       <div className="py-8 md:py-12">

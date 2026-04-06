@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Image, Sparkles, Download, RefreshCw, Wand2, BookOpen, FlaskConical, Globe, Calculator, Loader2, ZoomIn, X } from "lucide-react";
+import { useSEO, SEO_DATA } from "@/lib/useSEO";
 
 const QUICK_PROMPTS = [
   { icon: FlaskConical, label: "Human Eye Diagram", prompt: "human eye anatomy diagram labeled cornea iris pupil lens retina optic nerve educational science textbook style white background", color: "from-emerald-500 to-teal-500" },
@@ -20,6 +21,7 @@ function buildUrl(prompt: string, seed: number) {
 }
 
 export default function AiImage() {
+  useSEO(SEO_DATA.aiImage);
   const [prompt, setPrompt] = useState("");
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);

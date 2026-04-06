@@ -4,8 +4,10 @@ import { SUBJECTS, CHAPTERS, QUESTIONS } from "@/lib/mock-data";
 import { useProgress } from "@/hooks/use-progress";
 import { CheckCircle2, Circle, Target, Trophy, Filter } from "lucide-react";
 import { staggerContainer, fadeUp, fadeLeft, scaleIn, viewportOnce } from "@/lib/animations";
+import { useSEO, SEO_DATA } from "@/lib/useSEO";
 
 export default function Questions() {
+  useSEO(SEO_DATA.questions);
   const { toggleQuestion, isCompleted, getSubjectProgress, isLoaded } = useProgress();
   const [activeSubject, setActiveSubject] = useState(SUBJECTS[0].id);
   const [filter, setFilter] = useState<'all' | 'pending' | 'done'>('all');

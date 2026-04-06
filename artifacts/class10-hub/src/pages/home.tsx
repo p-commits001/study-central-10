@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { BookOpen, Brain, Download, Lightbulb, ArrowRight, Target, Flame, Sparkles } from "lucide-react";
 import { staggerContainer, fadeUp, fadeLeft, fadeRight, scaleIn, popIn, viewportOnce } from "@/lib/animations";
+import { useSEO, SEO_DATA } from "@/lib/useSEO";
 
 const features = [
   {
@@ -44,6 +45,7 @@ const features = [
 ];
 
 export default function Home() {
+  useSEO(SEO_DATA.home);
   return (
     <div className="container mx-auto px-4 md:px-6">
 

@@ -5,6 +5,7 @@ import {
   FileText, Moon, Highlighter, Target, Droplets, Sparkles, Lightbulb
 } from "lucide-react";
 import { staggerContainer, fadeUp, fadeLeft, fadeRight, scaleIn, viewportOnce } from "@/lib/animations";
+import { useSEO, SEO_DATA } from "@/lib/useSEO";
 
 const iconMap: Record<string, React.ElementType> = {
   Clock, BrainCircuit, CalendarRange, Users, Network,
@@ -12,6 +13,7 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function Tips() {
+  useSEO(SEO_DATA.tips);
   return (
     <div className="container mx-auto px-4 md:px-6 max-w-6xl">
       <div className="py-8 md:py-12">

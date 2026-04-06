@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { PDFS } from "@/lib/mock-data";
 import { Download, FileText, Search, ExternalLink, ShieldCheck } from "lucide-react";
 import { staggerContainer, fadeUp, scaleIn, viewportOnce } from "@/lib/animations";
+import { useSEO, SEO_DATA } from "@/lib/useSEO";
 
 const SUBJECT_COLORS: Record<string, string> = {
   "Maths": "text-blue-600 bg-blue-100 dark:bg-blue-950/40 dark:text-blue-400",
@@ -16,6 +17,7 @@ const SUBJECT_COLORS: Record<string, string> = {
 };
 
 export default function Pdfs() {
+  useSEO(SEO_DATA.pdfs);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeFilter, setActiveFilter] = useState("All");
 

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Film, Play, Pause, Square, Download, Sparkles, Volume2, VolumeX, RefreshCw, Smartphone, Monitor, Loader2 } from "lucide-react";
+import { useSEO, SEO_DATA } from "@/lib/useSEO";
 
 /* ─── TYPES ─── */
 type SceneType = "intro" | "fact" | "outro";
@@ -344,6 +345,7 @@ const RATIOS = [
 ];
 
 export default function AiVideo() {
+  useSEO(SEO_DATA.aiVideo);
   const [selectedTopic, setSelectedTopic] = useState<TopicData | null>(null);
   const [ratio, setRatio] = useState(RATIOS[0]);
   const [lang, setLang] = useState<Lang>("hinglish");

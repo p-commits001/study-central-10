@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trophy, CheckCircle2, XCircle, RotateCcw, Sparkles, Clock, BookOpen, Share2 } from "lucide-react";
 import { staggerContainer, fadeUp, scaleIn, popIn } from "@/lib/animations";
+import { useSEO, SEO_DATA } from "@/lib/useSEO";
 
 const SITE_LINK = "https://study-central--bkon02980.replit.app";
 
@@ -51,6 +52,7 @@ const questions = [
 type Phase = "intro" | "quiz" | "result";
 
 export default function Quiz() {
+  useSEO(SEO_DATA.quiz);
   const [phase, setPhase] = useState<Phase>("intro");
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
