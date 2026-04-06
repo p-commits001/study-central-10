@@ -52,8 +52,5 @@ Disallow: /auth
 Disallow: /api/
 Disallow: /*.json$
 
-# Crawl-delay for bots
-Crawl-delay: 2
-
 # Sitemap
 Sitemap: https://class10hubs.netlify.app/sitemap.xml

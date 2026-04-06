@@ -30,9 +30,24 @@
 /favicon.svg
   Cache-Control: public, max-age=604800
 
+/images/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.png
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=604800
+
 /sitemap.xml
   Cache-Control: public, max-age=43200
-  Content-Type: application/xml
+  Content-Type: application/xml; charset=UTF-8
 
 /robots.txt
   Cache-Control: public, max-age=86400

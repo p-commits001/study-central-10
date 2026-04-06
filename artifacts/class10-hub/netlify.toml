@@ -1,0 +1,25 @@
+[build]
+  command = "pnpm --filter @workspace/class10-hub run build"
+  publish = "artifacts/class10-hub/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [plugins.inputs.thresholds]
+    performance = 0.9
+    accessibility = 0.9
+    seo = 0.95
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[dev]
+  command = "pnpm --filter @workspace/class10-hub run dev"
+  targetPort = 3000
+  publish = "artifacts/class10-hub/dist"

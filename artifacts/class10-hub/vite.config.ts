@@ -48,39 +48,55 @@ export default defineConfig(async () => {
       emptyOutDir: true,
       target: "es2020",
       cssCodeSplit: true,
-      cssMinify: true,
+      cssMinify: "lightningcss",
       minify: "terser",
       terserOptions: {
         compress: {
           drop_console: true,
           drop_debugger: true,
-          pure_funcs: ["console.log", "console.info"],
-          passes: 2,
+          pure_funcs: ["console.log", "console.info", "console.warn"],
+          passes: 3,
+          dead_code: true,
+          collapse_vars: true,
+          reduce_vars: true,
+          unsafe_arrows: true,
+          unsafe_methods: true,
+          booleans_as_integers: false,
         },
-        mangle: { toplevel: true },
+        mangle: { toplevel: true, properties: false },
         format: { comments: false },
       },
       rollupOptions: {
         output: {
           manualChunks(id) {
-            if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/")) return "react-vendor";
+            if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/") || id.includes("node_modules/scheduler")) return "react-vendor";
             if (id.includes("node_modules/framer-motion")) return "motion";
             if (id.includes("node_modules/@tanstack")) return "query";
             if (id.includes("node_modules/wouter")) return "router";
             if (id.includes("node_modules/lucide-react")) return "icons";
-            if (id.includes("node_modules/@radix-ui") || id.includes("node_modules/class-variance-authority") || id.includes("node_modules/clsx")) return "ui";
+            if (id.includes("node_modules/@radix-ui") || id.includes("node_modules/class-variance-authority") || id.includes("node_modules/clsx") || id.includes("node_modules/tailwind-merge")) return "ui";
+            if (id.includes("node_modules/recharts") || id.includes("node_modules/d3-")) return "charts";
+            if (id.includes("node_modules/@supabase")) return "supabase";
           },
           chunkFileNames: "assets/[name]-[hash].js",
           assetFileNames: "assets/[name]-[hash][extname]",
           entryFileNames: "assets/[name]-[hash].js",
+          compact: true,
+        },
+        treeshake: {
+          moduleSideEffects: false,
+          propertyReadSideEffects: false,
+          unknownGlobalSideEffects: false,
         },
       },
       chunkSizeWarningLimit: 1200,
       reportCompressedSize: false,
+      sourcemap: false,
     },
     optimizeDeps: {
       include: ["react", "react-dom", "framer-motion", "wouter", "@tanstack/react-query"],
       esbuildOptions: { target: "es2020" },
+      force: false,
     },
     server: {
       port,
