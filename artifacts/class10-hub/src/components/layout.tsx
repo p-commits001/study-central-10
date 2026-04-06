@@ -5,7 +5,7 @@ import {
   Menu, X, GraduationCap, Instagram, User, Sparkles, 
   BookOpen, Brain, MessageSquare, Info, ShieldCheck, 
   AlertTriangle, Lightbulb, Download, ChevronRight, LogIn,
-  ClipboardCheck, LogOut, Mail, Image
+  ClipboardCheck, LogOut, Mail, Image, Video
 } from "lucide-react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 
@@ -74,6 +74,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     { label: "Home", icon: GraduationCap, href: "/" },
     { label: "AI Study Tutor", icon: Sparkles, href: "/ai-tutor", pro: true },
     { label: "AI Image Generator", icon: Image, href: "/ai-image", pro: true },
+    { label: "AI Video Reel", icon: Video, href: "/ai-video", pro: true },
     { label: "Class 10 Notes", icon: BookOpen, href: "/notes" },
     { label: "Practice Quiz", icon: ClipboardCheck, href: "/quiz" },
     { label: "Imp Questions", icon: Brain, href: "/questions" },
