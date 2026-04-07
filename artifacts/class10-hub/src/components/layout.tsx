@@ -61,45 +61,57 @@ export function Layout({ children }: { children: React.ReactNode }) {
   };
 
   const handleGoogleLogin = async () => {
-    if (!supabase) return setError("Login abhi available nahi hai.");
+    if (!supabase) return setError("Login setup nahi hai. Admin se contact karo.");
     setLoading(true); setError("");
+    const redirectTo = window.location.origin.includes("netlify")
+      ? "https://class10hubs.netlify.app"
+      : window.location.origin;
     const { error: e } = await supabase.auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo: window.location.origin }
+      options: { redirectTo }
     });
-    if (e) setError(e.message);
+    if (e) setError("Google login mein dikkat aayi: " + e.message);
     setLoading(false);
   };
 
   const handleEmailOTP = async () => {
-    if (!supabase) return setError("Login available nahi hai.");
+    if (!supabase) return setError("Login setup nahi hai.");
     if (!email.trim()) return setError("Email dalo please!");
+    if (!/\S+@\S+\.\S+/.test(email.trim())) return setError("Sahi email format dalo (ex: abc@gmail.com)");
     setLoading(true); setError("");
-    const { error: e } = await supabase.auth.signInWithOtp({ email: email.trim() });
-    if (e) setError(e.message);
+    const { error: e } = await supabase.auth.signInWithOtp({
+      email: email.trim(),
+      options: { emailRedirectTo: window.location.origin }
+    });
+    if (e) setError("Email bhejne mein dikkat: " + e.message);
     else setStep("otp");
     setLoading(false);
   };
 
   const handlePhoneOTP = async () => {
-    if (!supabase) return setError("Login available nahi hai.");
+    if (!supabase) return setError("Login setup nahi hai.");
     const cleaned = phone.replace(/\D/g, "");
-    if (cleaned.length < 10) return setError("Valid mobile number dalo!");
+    if (cleaned.length < 10) return setError("10 digit ka valid mobile number dalo!");
     setLoading(true); setError("");
     const formatted = `+91${cleaned.slice(-10)}`;
     const { error: e } = await supabase.auth.signInWithOtp({ phone: formatted });
-    if (e) setError(e.message || "SMS bhejna mushkil hua. Dobara try karo!");
-    else setStep("otp");
+    if (e) {
+      if (e.message.toLowerCase().includes("sms") || e.message.toLowerCase().includes("phone") || e.message.toLowerCase().includes("provider")) {
+        setError("SMS service abhi setup ho rahi hai. Google ya Email se login karo 👆");
+      } else {
+        setError(e.message);
+      }
+    } else setStep("otp");
     setLoading(false);
   };
 
   const handleVerifyPhoneOTP = async () => {
-    if (!supabase) return setError("Login available nahi hai.");
+    if (!supabase) return setError("Login setup nahi hai.");
     if (!otp.trim() || otp.length < 4) return setError("OTP dalo please!");
     setLoading(true); setError("");
     const formatted = `+91${phone.replace(/\D/g, "").slice(-10)}`;
     const { error: e } = await supabase.auth.verifyOtp({ phone: formatted, token: otp.trim(), type: "sms" });
-    if (e) setError(e.message || "OTP galat hai. Dobara check karo!");
+    if (e) setError("OTP galat hai ya expire ho gaya. " + e.message);
     else setStep("success");
     setLoading(false);
   };
