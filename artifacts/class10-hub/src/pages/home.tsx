@@ -139,8 +139,8 @@ export default function Home() {
             <div className="flex items-center gap-2 mb-4">
               <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 1, repeat: Infinity }} className="text-2xl">⏳</motion.div>
               <div>
-                <h2 className="text-white font-black text-xl md:text-2xl">Board Exam 2027 Countdown</h2>
-                <p className="text-white/80 text-xs">CBSE Class 10 · February 15, 2027 (Estimated)</p>
+                <h2 className="text-white font-black text-xl md:text-2xl">Board Exam 2026-27 Countdown</h2>
+                <p className="text-white/80 text-xs">CBSE Class 10 · February 2027 (Estimated)</p>
               </div>
             </div>
             <div className="grid grid-cols-4 gap-3">

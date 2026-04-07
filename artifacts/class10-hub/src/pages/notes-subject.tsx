@@ -191,7 +191,7 @@ export default function NotesSubject() {
                         transition={{ delay: 0.05 }} className="p-5 md:p-6">
 
                         <p className="text-foreground mb-5 leading-relaxed text-sm">
-                          Dive deep into <strong>{chapter.title}</strong>. This chapter covers all crucial concepts required for Board Exam 2026, carefully structured for easy understanding and retention.
+                          Dive deep into <strong>{chapter.title}</strong>. This chapter covers all crucial concepts required for Board Exam 2026-27, carefully structured for easy understanding and retention.
                         </p>
 
                         {/* Action Buttons */}

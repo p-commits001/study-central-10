@@ -195,7 +195,7 @@ function VideoReel({ topic, facts, theme, isPlaying }: { topic: string; facts: s
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 rounded-full bg-white/30 flex items-center justify-center text-xs">🎓</div>
           <span className="text-xs font-bold text-white/80">Class 10 Hub</span>
-          <div className="ml-auto text-xs text-white/60">#BoardExam2026</div>
+          <div className="ml-auto text-xs text-white/60">#BoardExam2026-27</div>
         </div>
       </div>
 
