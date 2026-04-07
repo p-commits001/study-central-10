@@ -63,12 +63,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const handleGoogleLogin = async () => {
     if (!supabase) return setError("Login setup nahi hai. Admin se contact karo.");
     setLoading(true); setError("");
-    const redirectTo = window.location.origin.includes("netlify")
+    const redirectTo = window.location.href.includes("netlify")
       ? "https://class10hubs.netlify.app"
       : window.location.origin;
     const { error: e } = await supabase.auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo }
+      options: {
+        redirectTo,
+        queryParams: { access_type: "offline", prompt: "consent" }
+      }
     });
     if (e) setError("Google login mein dikkat aayi: " + e.message);
     setLoading(false);
@@ -81,10 +84,29 @@ export function Layout({ children }: { children: React.ReactNode }) {
     setLoading(true); setError("");
     const { error: e } = await supabase.auth.signInWithOtp({
       email: email.trim(),
-      options: { emailRedirectTo: window.location.origin }
+      options: {
+        emailRedirectTo: window.location.href.includes("netlify")
+          ? "https://class10hubs.netlify.app"
+          : window.location.origin,
+        shouldCreateUser: true
+      }
     });
     if (e) setError("Email bhejne mein dikkat: " + e.message);
     else setStep("otp");
+    setLoading(false);
+  };
+
+  const handleVerifyEmailOTP = async () => {
+    if (!supabase) return setError("Login setup nahi hai.");
+    if (!otp.trim() || otp.length < 4) return setError("OTP ya code dalo please!");
+    setLoading(true); setError("");
+    const { error: e } = await supabase.auth.verifyOtp({
+      email: email.trim(),
+      token: otp.trim(),
+      type: "email"
+    });
+    if (e) setError("OTP galat hai ya expire ho gaya. Dobara try karo.");
+    else setStep("success");
     setLoading(false);
   };
 
@@ -96,11 +118,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     const formatted = `+91${cleaned.slice(-10)}`;
     const { error: e } = await supabase.auth.signInWithOtp({ phone: formatted });
     if (e) {
-      if (e.message.toLowerCase().includes("sms") || e.message.toLowerCase().includes("phone") || e.message.toLowerCase().includes("provider")) {
-        setError("SMS service abhi setup ho rahi hai. Google ya Email se login karo 👆");
-      } else {
-        setError(e.message);
-      }
+      setError("OTP bhejne mein dikkat: " + e.message);
     } else setStep("otp");
     setLoading(false);
   };
@@ -279,11 +297,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <motion.div key="otp-step" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-4">
 
                     {tab === "email" ? (
-                      <motion.div className="text-center p-4 bg-primary/5 rounded-2xl border border-primary/20">
-                        <motion.div animate={{ y: [0, -6, 0] }} transition={{ duration: 1, repeat: Infinity }}><Mail className="mx-auto mb-2 text-primary" size={32} /></motion.div>
-                        <p className="text-sm font-bold">Magic link bheja gaya!</p>
-                        <p className="text-xs text-muted-foreground mt-1">{email} par check karo aur link pe click karo</p>
-                      </motion.div>
+                      <>
+                        <div className="text-center">
+                          <motion.div animate={{ y: [0, -6, 0] }} transition={{ duration: 1, repeat: Infinity }}><Mail className="mx-auto mb-2 text-primary" size={32} /></motion.div>
+                          <p className="text-sm font-bold">Email bheja gaya! ✉️</p>
+                          <p className="text-xs text-muted-foreground mt-1">{email} par OTP ya magic link check karo</p>
+                        </div>
+                        <motion.input whileFocus={{ boxShadow: "0 0 0 3px rgba(99,102,241,0.2)" }}
+                          type="number" value={otp} onChange={e => { setOtp(e.target.value); setError(""); }}
+                          onKeyDown={e => e.key === "Enter" && handleVerifyEmailOTP()}
+                          placeholder="6-digit OTP dalo"
+                          className="w-full p-3.5 rounded-2xl border bg-secondary/30 outline-none focus:ring-2 ring-primary text-center text-xl font-bold tracking-widest" />
+                        <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}
+                          onClick={handleVerifyEmailOTP} disabled={loading}
+                          className="w-full py-3.5 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold rounded-2xl shadow-lg disabled:opacity-50">
+                          {loading ? "Verify ho raha hai..." : "Verify OTP ✅"}
+                        </motion.button>
+                        <p className="text-center text-xs text-muted-foreground">Ya email mein aaye magic link pe click karo</p>
+                      </>
                     ) : (
                       <>
                         <div className="text-center">
