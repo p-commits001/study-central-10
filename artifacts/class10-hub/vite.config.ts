@@ -49,23 +49,7 @@ export default defineConfig(async () => {
       target: "es2020",
       cssCodeSplit: true,
       cssMinify: "lightningcss",
-      minify: "terser",
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true,
-          pure_funcs: ["console.log", "console.info", "console.warn"],
-          passes: 3,
-          dead_code: true,
-          collapse_vars: true,
-          reduce_vars: true,
-          unsafe_arrows: true,
-          unsafe_methods: true,
-          booleans_as_integers: false,
-        },
-        mangle: { toplevel: true, properties: false },
-        format: { comments: false },
-      },
+      minify: "esbuild",
       rollupOptions: {
         output: {
           manualChunks(id) {
