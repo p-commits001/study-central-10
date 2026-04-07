@@ -18,6 +18,7 @@ const SearchPage      = lazy(() => import("./pages/search"));
 const AiTutor         = lazy(() => import("./pages/ai-tutor"));
 const AiImage         = lazy(() => import("./pages/ai-image"));
 const AiVideo         = lazy(() => import("./pages/ai-video"));
+const AiVideoSummarizer = lazy(() => import("./pages/ai-video-summarizer"));
 const About           = lazy(() => import("./pages/about"));
 const Books           = lazy(() => import("./pages/books"));
 const RecommendedBooks = lazy(() => import("./pages/recommended-books"));
@@ -68,6 +69,7 @@ function Router() {
           <Route path="/ai-tutor"><AnimatedPage><AiTutor /></AnimatedPage></Route>
           <Route path="/ai-image"><AnimatedPage><AiImage /></AnimatedPage></Route>
           <Route path="/ai-video"><AnimatedPage><AiVideo /></AnimatedPage></Route>
+          <Route path="/ai-video-summarizer"><AnimatedPage><AiVideoSummarizer /></AnimatedPage></Route>
           <Route path="/quiz"><AnimatedPage><Quiz /></AnimatedPage></Route>
           <Route path="/questions"><AnimatedPage><Questions /></AnimatedPage></Route>
           <Route path="/pdfs"><AnimatedPage><Pdfs /></AnimatedPage></Route>
