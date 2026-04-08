@@ -1,7 +1,10 @@
 [build]
-  base = "artifacts/class10-hub"
-  command = "npm install && npm run build"
-  publish = "dist"
+  command = "pnpm install && pnpm --filter @workspace/class10-hub run build"
+  publish = "artifacts/class10-hub/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
 
 [[redirects]]
   from = "/*"
