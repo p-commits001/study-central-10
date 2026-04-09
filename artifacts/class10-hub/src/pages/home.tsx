@@ -277,6 +277,50 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* ═══ TRENDING CONTENT ═══ */}
+      <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={viewportOnce} className="py-12">
+        <div className="text-center mb-8">
+          <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={viewportOnce} transition={{ type: "spring", stiffness: 300 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 text-red-500 border border-red-500/20 font-bold text-sm mb-3">
+            <motion.span animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>🔥</motion.span>
+            Trending Content
+          </motion.div>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-3">Aaj Ka Best Content</h2>
+          <p className="text-muted-foreground">Students jo sabse zyada padh rahe hain — popular notes & tips</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            { emoji: "⚗️", subject: "Science", title: "Chemical Reactions & Equations", desc: "Combination, Decomposition, Displacement, Redox — Saare types + Balancing trick", tag: "🔥 Most Read", href: "/notes/science/s1", color: "from-emerald-500 to-teal-500", bg: "bg-emerald-50 dark:bg-emerald-950/30" },
+            { emoji: "📐", subject: "Maths", title: "Trigonometry Cheat Sheet", desc: "Hand Trick se sin/cos/tan table yaad karo sirf 1 minute mein!", tag: "⚡ Viral", href: "/notes/maths/m6", color: "from-blue-500 to-indigo-500", bg: "bg-blue-50 dark:bg-blue-950/30" },
+            { emoji: "✉️", subject: "English", title: "Letter Writing — Full Marks", desc: "Formal & Informal letter format, Do's & Don'ts, Sample letters with marks strategy", tag: "✅ Board Imp", href: "/notes/english/e_letter", color: "from-violet-500 to-purple-500", bg: "bg-violet-50 dark:bg-violet-950/30" },
+            { emoji: "🗺️", subject: "Social Science", title: "Map Work 2026-27", desc: "History + Geography ke saare important map points ek jagah — Number Pakki!", tag: "📍 High Value", href: "/notes/sst/ss_map", color: "from-orange-500 to-amber-500", bg: "bg-orange-50 dark:bg-orange-950/30" },
+            { emoji: "🏆", subject: "Exam Strategy", title: "95% Kaise Laayein?", desc: "NCERT first, PYQs solve karo, Revision plan — Board topper ka secret formula", tag: "🎯 Must Read", href: "/tips", color: "from-rose-500 to-pink-500", bg: "bg-rose-50 dark:bg-rose-950/30" },
+            { emoji: "📊", subject: "Maths", title: "Statistics & Probability", desc: "Mean, Median, Mode of grouped data + Probability shortcuts for board exam", tag: "📈 Scoring", href: "/notes/maths/m12", color: "from-cyan-500 to-blue-500", bg: "bg-cyan-50 dark:bg-cyan-950/30" },
+          ].map((card, i) => (
+            <Link key={card.title} href={card.href}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={viewportOnce} transition={{ delay: i * 0.08 }}
+                whileHover={{ y: -6, scale: 1.02, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }} whileTap={{ scale: 0.97 }}
+                className="group h-full bg-card border border-border hover:border-primary/30 rounded-3xl p-5 cursor-pointer transition-colors duration-300 relative overflow-hidden flex flex-col">
+                <div className={`absolute -bottom-6 -right-6 w-20 h-20 bg-gradient-to-br ${card.color} opacity-0 group-hover:opacity-10 rounded-full blur-xl transition-opacity duration-500`} />
+                <div className="flex items-start justify-between mb-3">
+                  <div className={`w-12 h-12 rounded-2xl ${card.bg} flex items-center justify-center text-2xl shrink-0`}>
+                    {card.emoji}
+                  </div>
+                  <span className={`text-[10px] font-black px-2 py-1 rounded-full bg-gradient-to-r ${card.color} text-white whitespace-nowrap`}>{card.tag}</span>
+                </div>
+                <p className={`text-xs font-bold bg-gradient-to-r ${card.color} bg-clip-text text-transparent mb-1`}>{card.subject}</p>
+                <h3 className="font-display font-bold text-base mb-2 group-hover:text-primary transition-colors leading-snug">{card.title}</h3>
+                <p className="text-muted-foreground text-xs flex-1 leading-relaxed">{card.desc}</p>
+                <div className="flex items-center gap-1 text-primary font-semibold text-xs mt-3">
+                  Padho <ArrowRight size={12} />
+                </div>
+              </motion.div>
+            </Link>
+          ))}
+        </div>
+      </motion.section>
+
       {/* ═══ AI TOOLS SECTION ═══ */}
       <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={viewportOnce} className="py-12">
         <div className="text-center mb-8">

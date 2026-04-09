@@ -53,6 +53,7 @@ export const CHAPTERS: Record<string, { id: string; title: string; description: 
     { id: "e10", title: "Dust of Snow (Poem)", description: "A crow and a hemlock tree change the poet's mood" },
     { id: "e11", title: "Fire and Ice (Poem)", description: "Frost's poem about the end of the world" },
     { id: "e12", title: "A Tiger in the Zoo (Poem)", description: "Contrast between wild freedom and cage life" },
+    { id: "e_letter", title: "✉️ Letter Writing — Full Marks Strategy", description: "Formal & Informal letter format, Sample letters, Do's & Don'ts — 5 marks pakke!" },
   ],
   sst: [
     { id: "ss1", title: "The Rise of Nationalism in Europe", description: "French revolution, making of Germany and Italy" },
@@ -69,6 +70,7 @@ export const CHAPTERS: Record<string, { id: string; title: string; description: 
     { id: "ss12", title: "Democracy and Diversity", description: "Social divisions, politics, examples from India & abroad" },
     { id: "ss13", title: "Money and Credit", description: "Formal and informal sources, credit, banks" },
     { id: "ss14", title: "Globalisation and the Indian Economy", description: "MNCs, WTO, impact on India" },
+    { id: "ss_map", title: "🗺️ Map Work Complete Guide 2026-27", description: "History + Geography ke saare important map points — Nationalism, Industries, Dams, Nuclear Plants" },
   ],
   hindi: [
     { id: "h1", title: "Surdas ke Pad", description: "Devotional poetry by Surdas" },
@@ -465,6 +467,222 @@ Lencho ek kisan hai jo apni crops ke liye God par bahut bharosa karta hai. Ek to
 - Character sketch of Postmaster (100 words) — 5 marks
 - Theme of faith and irony — guaranteed question
   `,
+
+  e_letter: `
+# ✉️ Letter Writing — Full Marks Strategy (Class 10 English)
+
+## Board Exam Mein Letter Kitna Important Hai?
+Letter Writing = **5 marks** guaranteed aate hain! Agar format sahi hai toh 4-5 marks pakke hain.
+
+---
+
+## 📋 Types of Letters in Class 10
+
+| Type | Kab likhte hain | Tone |
+|------|-----------------|------|
+| **Formal Letter** | Government/Company/Editor ko | Professional, polite |
+| **Informal Letter** | Friend/Relative ko | Friendly, casual |
+
+---
+
+## 🏛️ Formal Letter Format (Full Marks Template)
+
+\`\`\`
+[Your Address]
+[City, PIN]
+[Date: DD Month YYYY]
+
+The [Designation],
+[Organization Name],
+[Address]
+
+Subject: [Brief subject in one line]
+
+Sir/Madam,
+
+[Opening Paragraph — State the purpose clearly]
+
+[Main Body — Give details, reasons, or requests]
+
+[Closing Paragraph — State what action you expect]
+
+Yours faithfully,
+[Your Name]
+\`\`\`
+
+### Types of Formal Letters:
+1. **Letter to Editor** — Newspaper mein problem report karna
+2. **Letter to Principal** — School se kuch maangna
+3. **Letter of Complaint** — Product/Service ki complaint
+4. **Letter of Enquiry** — Kisi cheez ke baare mein jaankari maangna
+5. **Letter for Job Application** — Job ke liye apply karna
+
+---
+
+## 👫 Informal Letter Format
+
+\`\`\`
+[Your Address]
+[City, PIN]
+[Date]
+
+Dear [Name/Dost ka naam],
+
+[Opening — Kuch pyaari baatein, halchal]
+
+[Main Content — Jo topic hai uske baare mein likho]
+
+[Closing — Milne ki ichha, family ko pranam]
+
+Yours lovingly/affectionately,
+[Your Name]
+\`\`\`
+
+---
+
+## ✅ Do's & Don'ts (Full Marks Tips)
+
+### ✅ ZAROOR Karo:
+- Subject line Formal letter mein likho (bold ya underline)
+- Date sahi format mein: 8 April 2026 ✓ (8/4/2026 ✗)
+- Signature ke upar "Yours faithfully" (Formal) ya "Yours lovingly" (Informal)
+- Paragraphs alag karo — ek hi block mein mat likho
+- Word limit follow karo: usually 120-150 words
+
+### ❌ Galti Mat Karo:
+- Formal letter mein "Dear Friend" mat likho
+- Informal mein "Sir/Madam" mat likho  
+- Subject Line informal mein zaroorat nahi
+- Spelling mistakes = marks katenge
+- Bahut choti ya bahut badi mat likho
+
+---
+
+## 📝 Sample Letter — Letter to Editor
+
+**Q: Write a letter to the Editor of a newspaper about increasing pollution in your city.**
+
+---
+
+12-B, Gandhi Nagar  
+Agra — 282001  
+8 April 2026
+
+The Editor,  
+The Hindustan Times,  
+New Delhi
+
+**Subject: Alarming rise in air pollution in Agra**
+
+Sir,
+
+Through the columns of your esteemed newspaper, I wish to draw the attention of the concerned authorities towards the alarming rise in air pollution in our city.
+
+The air quality in Agra has deteriorated significantly over the past few months. Factory emissions, construction dust, and vehicular smoke have made breathing difficult for residents. The situation is especially dangerous for senior citizens and children.
+
+I request the authorities to take strict action against polluting industries and promote the use of public transport. Mandatory pollution checks for vehicles should be implemented immediately.
+
+Yours faithfully,  
+Rahul Sharma
+
+---
+
+## 🏆 95% Marks Strategy for Letter Writing
+
+1. **Format = 1 mark** — Address, Date, Subject, Salutation, Closing
+2. **Content = 2-3 marks** — Relevant points, clear language
+3. **Language = 1 mark** — No grammatical errors
+4. **Word Limit = 0.5 mark** — Stay within 100-150 words
+
+**Pro Tip:** Examiner pehle format dekhta hai — agar format perfect ho toh marks guaranteed!
+  `,
+
+  ss_map: `
+# 🗺️ Map Work Class 10 — Complete Guide 2026-27
+
+## Map Work Kitne Marks Ka Hai?
+SST board paper mein **3 marks** Map Work ke hote hain — aur yeh sabse easy marks hain!
+
+---
+
+## 📜 HISTORY MAP WORK — Important Locations
+
+### Nationalism in India (Chapter 2)
+| Location | Kyon Important |
+|----------|----------------|
+| **Champaran (Bihar)** | Indigo Plantation Movement — Gandhi ji ka pehla satyagraha |
+| **Kheda (Gujarat)** | Peasant Satyagraha — tax maafi ki maang |
+| **Ahmedabad (Gujarat)** | Mill Workers Satyagraha 1918 |
+| **Amritsar (Punjab)** | Jallianwala Bagh Massacre 1919 |
+| **Chauri Chaura (UP)** | Violent incident — NCM suspended |
+| **Dandi (Gujarat)** | Salt March 1930 — Gandhi 241 mile walk |
+| **Bardoli (Gujarat)** | No-Tax Campaign — Sardar Patel |
+
+### The Rise of Nationalism in Europe
+| Location | Event |
+|----------|-------|
+| **Sardinia-Piedmont** | Italian unification ka centre |
+| **Frankfurt** | Frankfurt Parliament 1848 |
+| **Vienna** | Congress of Vienna 1815 |
+
+---
+
+## 🌍 GEOGRAPHY MAP WORK — Important Points
+
+### Agriculture (Chapter 4)
+| Crop | Important States/Regions |
+|------|--------------------------|
+| **Rice** | West Bengal, Uttar Pradesh, Andhra Pradesh |
+| **Wheat** | Punjab, Haryana, Uttar Pradesh |
+| **Tea** | Assam, West Bengal (Darjeeling) |
+| **Coffee** | Karnataka (Coorg), Kerala |
+| **Cotton** | Maharashtra, Gujarat, Andhra Pradesh |
+| **Jute** | West Bengal (major producer) |
+| **Sugarcane** | Uttar Pradesh, Maharashtra |
+| **Rubber** | Kerala |
+
+### Industries (Chapter 6)
+| Industry | Location |
+|----------|----------|
+| **Iron & Steel** | Jamshedpur (TISCO), Bhilai, Rourkela, Durgapur, Bokaro |
+| **Cotton Textile** | Mumbai, Ahmedabad, Surat, Kanpur |
+| **Jute** | Hooghly River — West Bengal |
+| **Software (IT)** | Bengaluru, Hyderabad, Chennai, Pune, Delhi NCR |
+| **Petrochemical** | Jamnagar, Vadodara, Mumbai |
+
+### Water Resources (Chapter 3)
+| Dam/River | State | River |
+|-----------|-------|-------|
+| **Bhakra Nangal** | Punjab/Himachal | Sutlej |
+| **Hirakud** | Odisha | Mahanadi |
+| **Nagarjunasagar** | Andhra Pradesh | Krishna |
+| **Idukki** | Kerala | Periyar |
+| **Tehri** | Uttarakhand | Bhagirathi |
+
+### Power Plants (Chapter 7)
+| Type | Examples |
+|------|---------|
+| **Thermal** | Ramagundam, Singrauli, Korba, Farakka |
+| **Nuclear** | Narora (UP), Rawatbhata (Raj), Kalpakkam (TN), Tarapur (Mah), Kaiga (Kar), Kakrapar (Guj) |
+| **Hydro** | Bhakra Nangal, Hirakud, Koyna |
+
+---
+
+## 🎯 Map Work Exam Tips
+
+1. **Pencil se mark karo** — pen galat lag sakta hai
+2. **Arrow aur naam clearly likho** — dots nahi
+3. **State boundaries dhyan se dekho** — confusion hoti hai
+4. **Roz ek state identify karo** — practice se aata hai
+5. **Atlas saath rakho padhai mein** — NCERT map book
+
+## 📌 Most Expected in Board Exam 2026-27
+- Jallianwala Bagh, Dandi, Chauri Chaura (History)
+- Jamshedpur/Bhilai (Steel), Mumbai/Ahmedabad (Cotton) (Industry)
+- Bhakra Nangal, Hirakud (Dams)
+- Nuclear Power Plants (all 6 locations)
+- Major crop growing areas
+  `,
 };
 
 export const QUESTIONS: Record<string, { id: string; text: string; marks: number; year: string }[]> = {
@@ -680,4 +898,8 @@ export const STUDY_TIPS = [
   { id: "t8", title: "Highlight Sparingly", description: "If you highlight everything, you've highlighted nothing. Only mark key terms and formulas.", icon: "Highlighter" },
   { id: "t9", title: "Eat the Frog", description: "Tackle your hardest or least favorite subject first thing in the morning when willpower is highest.", icon: "Target" },
   { id: "t10", title: "Stay Hydrated", description: "Your brain needs water to function optimally. Keep a water bottle on your desk while studying.", icon: "Droplets" },
+  { id: "t11", title: "NCERT Pehle, Baaki Baad", description: "95% board questions NCERT se hi aate hain. Pehle NCERT line-by-line padho, phir guides dekho.", icon: "BookOpen" },
+  { id: "t12", title: "PYQs — Secret Weapon", description: "Last 5 saal ke previous year questions solve karo. Pattern samajh aayega aur same questions repeat hote hain.", icon: "FileText" },
+  { id: "t13", title: "Revision Plan: 1-3-7-30", description: "Jo padha hai use 1 din baad revise karo, phir 3 din baad, phir 7 din baad, phir 30 din baad — pakka yaad rahega.", icon: "CalendarRange" },
+  { id: "t14", title: "Mock Tests Zaroor Do", description: "Exam se 1 mahina pehle poore paper ko time mein solve karo. 3 ghante mein 80 marks — practice karo.", icon: "Clock" },
 ];
