@@ -1,0 +1,59 @@
+{
+  "name": "Class 10 Study Hub",
+  "short_name": "Class10Hub",
+  "description": "Best Study Material for Class 10 Boards — Notes, Quiz, AI Tutor, PYQs | CBSE 2026-27",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4621a8",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/opengraph.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Class 10 Hub Homepage"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Chapter Notes",
+      "short_name": "Notes",
+      "description": "Read chapter-wise notes",
+      "url": "/notes",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "MCQ Quiz",
+      "short_name": "Quiz",
+      "description": "Practice 500+ MCQs",
+      "url": "/quiz",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "AI Tutor",
+      "short_name": "AI",
+      "description": "Ask AI any doubt",
+      "url": "/ai",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
