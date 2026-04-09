@@ -7,6 +7,7 @@ import { ThemeProvider } from "./components/theme-provider";
 import { Layout } from "./components/layout";
 import { NotificationPrompt } from "./components/NotificationPrompt";
 import { PWAInstallPrompt } from "./components/PWAInstallPrompt";
+import { DebugPanel } from "./components/DebugPanel";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Home            = lazy(() => import("./pages/home"));
@@ -100,6 +101,7 @@ function App() {
           </WouterRouter>
           <PWAInstallPrompt />
           <NotificationPrompt />
+          <DebugPanel />
           <Toaster />
         </TooltipProvider>
       </QueryClientProvider>

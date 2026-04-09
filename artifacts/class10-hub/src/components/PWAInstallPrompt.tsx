@@ -26,17 +26,24 @@ export function PWAInstallPrompt() {
 
   useEffect(() => {
     if (isStandalone()) return;
-    if (isDismissedRecently()) return;
 
     const handler = (e: Event) => {
       e.preventDefault();
       deferredPromptRef.current = e as typeof deferredPromptRef.current;
-      // Small delay so page loads first
-      setTimeout(() => setShow(true), 1500);
+      if (!isDismissedRecently()) {
+        setTimeout(() => setShow(true), 1500);
+      }
     };
-
     window.addEventListener("beforeinstallprompt", handler);
-    return () => window.removeEventListener("beforeinstallprompt", handler);
+
+    // Debug trigger — bypasses all checks
+    const debugHandler = () => setShow(true);
+    window.addEventListener("debug-show-install", debugHandler);
+
+    return () => {
+      window.removeEventListener("beforeinstallprompt", handler);
+      window.removeEventListener("debug-show-install", debugHandler);
+    };
   }, []);
 
   async function handleInstall() {
