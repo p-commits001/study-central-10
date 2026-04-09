@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "./components/theme-provider";
 import { Layout } from "./components/layout";
+import { NotificationPrompt } from "./components/NotificationPrompt";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Home            = lazy(() => import("./pages/home"));
@@ -96,6 +97,7 @@ function App() {
           <WouterRouter base={import.meta.env.BASE_URL?.replace(/\/$/, "")}>
             <Router />
           </WouterRouter>
+          <NotificationPrompt />
           <Toaster />
         </TooltipProvider>
       </QueryClientProvider>
