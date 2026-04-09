@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Bug, Smartphone, Bell, BellOff, ChevronUp, ChevronDown, SendHorizonal } from "lucide-react";
 import { sendTestNotification, requestNotificationPermission } from "@/lib/firebase";
 
-export function DebugPanel() {
+function DebugPanelInner() {
   const [open, setOpen] = useState(false);
   const [log, setLog] = useState<string[]>([]);
 
@@ -21,7 +21,7 @@ export function DebugPanel() {
   }
 
   async function testFirebaseNotif() {
-    const perm = Notification.permission;
+    const perm = "Notification" in window ? Notification.permission : "not-supported";
     if (perm === "default") {
       addLog("⏳ Requesting permission...");
       const result = await requestNotificationPermission();
@@ -51,7 +51,6 @@ export function DebugPanel() {
 
   return (
     <div className="fixed bottom-4 left-4 z-[9990] font-mono text-xs">
-      {/* Toggle button */}
       <button
         onClick={() => setOpen((p) => !p)}
         className="flex items-center gap-1.5 bg-zinc-900 text-yellow-400 border border-yellow-500/40 rounded-full px-3 py-2 shadow-lg hover:bg-zinc-800 transition-colors"
@@ -61,7 +60,6 @@ export function DebugPanel() {
         {open ? <ChevronDown className="w-3 h-3" /> : <ChevronUp className="w-3 h-3" />}
       </button>
 
-      {/* Panel */}
       {open && (
         <div className="mt-2 w-72 bg-zinc-900 border border-zinc-700 rounded-2xl shadow-2xl overflow-hidden">
           <div className="bg-zinc-800 px-3 py-2 flex items-center gap-2 border-b border-zinc-700">
@@ -70,7 +68,6 @@ export function DebugPanel() {
           </div>
 
           <div className="p-3 flex flex-col gap-2">
-            {/* Action buttons */}
             <div className="grid grid-cols-2 gap-2">
               <button
                 onClick={triggerInstall}
@@ -104,7 +101,6 @@ export function DebugPanel() {
               <span>Check PWA Status</span>
             </button>
 
-            {/* Log output */}
             {log.length > 0 && (
               <div className="mt-1 bg-zinc-950 rounded-xl p-2 space-y-1 max-h-28 overflow-y-auto">
                 {log.map((l, i) => (
@@ -112,11 +108,14 @@ export function DebugPanel() {
                 ))}
               </div>
             )}
-
-            <p className="text-zinc-600 text-center mt-1">Remove this panel before going live</p>
           </div>
         </div>
       )}
     </div>
   );
+}
+
+export function DebugPanel() {
+  if (import.meta.env.PROD) return null;
+  return <DebugPanelInner />;
 }

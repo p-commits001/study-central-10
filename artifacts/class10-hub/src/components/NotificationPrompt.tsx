@@ -9,14 +9,13 @@ const LS_BLOCKED_DISMISSED = "notif-blocked-dismissed";
 const SNOOZE_DAYS = 3;
 
 function shouldShowPrompt(): boolean {
-  if (!("Notification" in window)) return false;
-  if (Notification.permission !== "default") return false;
   if (localStorage.getItem(LS_INTERACTED)) return false;
   const snoozed = localStorage.getItem(LS_SNOOZED_AT);
   if (snoozed) {
     const diff = Date.now() - parseInt(snoozed, 10);
     if (diff < SNOOZE_DAYS * 24 * 60 * 60 * 1000) return false;
   }
+  if ("Notification" in window && Notification.permission === "granted") return false;
   return true;
 }
 
@@ -34,17 +33,14 @@ export function NotificationPrompt() {
   const tipRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Auto-trigger logic
     const t = setTimeout(() => {
       if (shouldShowPrompt()) setShow(true);
     }, 4500);
 
-    // Show blocked banner if permission is denied
     if (isBlocked() && !localStorage.getItem(LS_BLOCKED_DISMISSED)) {
       setTimeout(() => setShowBlockedBanner(true), 2000);
     }
 
-    // Listen for debug trigger
     const debugHandler = () => setShow(true);
     window.addEventListener("debug-show-notif", debugHandler);
 
@@ -61,7 +57,6 @@ export function NotificationPrompt() {
     });
   }, []);
 
-  // Close tip on outside click
   useEffect(() => {
     if (!showBlockedTip) return;
     function handler(e: MouseEvent) {
@@ -80,7 +75,10 @@ export function NotificationPrompt() {
 
   async function handleTurnOn() {
     setLoading(true);
-    const result = await requestNotificationPermission();
+    let result: NotificationPermission = "default";
+    if ("Notification" in window) {
+      result = await requestNotificationPermission();
+    }
     localStorage.setItem(LS_INTERACTED, "1");
     setLoading(false);
     setShow(false);
@@ -108,7 +106,6 @@ export function NotificationPrompt() {
     setShowBlockedTip(false);
   }
 
-  // Browser-specific instructions
   const browserSteps = (() => {
     const ua = navigator.userAgent;
     if (/Chrome/.test(ua) && !/Edge/.test(ua)) {
@@ -141,7 +138,6 @@ export function NotificationPrompt() {
 
   return (
     <>
-      {/* ── Notification Prompt ─────────────────────────── */}
       <AnimatePresence>
         {show && (
           <>
@@ -160,7 +156,6 @@ export function NotificationPrompt() {
               className="fixed bottom-0 left-0 right-0 z-[9997] max-w-lg mx-auto"
             >
               <div className="bg-white dark:bg-zinc-900 rounded-t-3xl shadow-2xl overflow-hidden">
-                {/* Header */}
                 <div className="relative bg-gradient-to-br from-purple-700 via-purple-600 to-indigo-600 px-5 pt-5 pb-7">
                   <button
                     onClick={handleSnooze}
@@ -185,7 +180,6 @@ export function NotificationPrompt() {
                   </p>
                 </div>
 
-                {/* Alert type tiles */}
                 <div className="px-5 pt-5 pb-3 grid grid-cols-3 gap-3">
                   {[
                     { icon: FileText,       label: "Question\nPapers" },
@@ -201,7 +195,6 @@ export function NotificationPrompt() {
                   ))}
                 </div>
 
-                {/* Buttons */}
                 <div className="px-5 pt-2 pb-6 flex flex-col gap-2">
                   <button
                     onClick={handleTurnOn}
@@ -232,7 +225,6 @@ export function NotificationPrompt() {
         )}
       </AnimatePresence>
 
-      {/* ── Blocked Notifications Banner ─────────────────── */}
       <AnimatePresence>
         {showBlockedBanner && !show && (
           <motion.div
@@ -243,7 +235,6 @@ export function NotificationPrompt() {
             transition={{ type: "spring", stiffness: 300, damping: 28 }}
             className="fixed bottom-20 right-4 z-[9995] max-w-xs"
           >
-            {/* Tip panel */}
             <AnimatePresence>
               {showBlockedTip && (
                 <motion.div
@@ -286,7 +277,6 @@ export function NotificationPrompt() {
               )}
             </AnimatePresence>
 
-            {/* Bell icon chip */}
             <button
               onClick={() => setShowBlockedTip((p) => !p)}
               className="flex items-center gap-2 bg-white dark:bg-zinc-800 border border-purple-200 dark:border-purple-700 rounded-full shadow-lg px-3 py-2 hover:border-purple-400 transition-all group"
@@ -303,7 +293,6 @@ export function NotificationPrompt() {
         )}
       </AnimatePresence>
 
-      {/* ── Foreground push toast ─────────────────────────── */}
       <AnimatePresence>
         {toastMsg && (
           <motion.div

@@ -11,8 +11,8 @@ const renderMarkdown = (content: string) => {
     const rows = tableBlock.trim().split('\n').filter(r => r.trim());
     if (rows.length < 2) return tableBlock;
     const isHeaderSep = (row: string) => /^\|[\s\-:|]+\|$/.test(row.trim());
-    let headerRow = rows[0];
-    let bodyRows = rows.filter((_, i) => i > 0 && !isHeaderSep(rows[i]));
+    const headerRow = rows[0];
+    const bodyRows = rows.filter((_, i) => i > 0 && !isHeaderSep(rows[i]));
 
     const parseRow = (row: string, tag: string) =>
       '<tr>' + row.trim().replace(/^\||\|$/g, '').split('|')
@@ -28,10 +28,23 @@ const renderMarkdown = (content: string) => {
   html = html.replace(/^> (.*$)/gim, '<blockquote class="border-l-4 border-primary/50 pl-4 py-2 my-4 bg-primary/5 rounded-r-lg italic text-foreground/80">$1</blockquote>');
   html = html.replace(/^# (.*$)/gim, '<h1 class="text-3xl md:text-4xl font-display font-bold mt-8 mb-6 text-primary">$1</h1>');
   html = html.replace(/^## (.*$)/gim, '<h2 class="text-2xl font-display font-bold mt-8 mb-4 border-b border-border pb-2">$1</h2>');
+  html = html.replace(/^### (.*$)/gim, '<h3 class="text-xl font-display font-bold mt-6 mb-3 text-foreground">$1</h3>');
   html = html.replace(/\*\*(.*?)\*\*/gim, '<strong class="font-bold text-foreground">$1</strong>');
   html = html.replace(/\*(.*?)\*/gim, '<em class="italic">$1</em>');
-  html = html.replace(/^\- (.*$)/gim, '<li class="ml-4 list-disc mb-2">$1</li>');
-  html = html.replace(/^(?!<[a-z])(.+)$/gim, '<p class="mb-4 leading-relaxed text-foreground/90">$1</p>');
+
+  html = html.replace(/((?:^\d+\. .+\n?)+)/gm, (block) => {
+    const items = block.trim().split('\n').filter(l => l.trim());
+    const lis = items.map(l => `<li class="mb-2 text-foreground/90">${l.replace(/^\d+\.\s*/, '')}</li>`).join('');
+    return `<ol class="list-decimal ml-6 my-4 space-y-1">${lis}</ol>`;
+  });
+
+  html = html.replace(/((?:^\- .+\n?)+)/gm, (block) => {
+    const items = block.trim().split('\n').filter(l => l.trim());
+    const lis = items.map(l => `<li class="mb-2 text-foreground/90">${l.replace(/^-\s*/, '')}</li>`).join('');
+    return `<ul class="list-disc ml-6 my-4 space-y-1">${lis}</ul>`;
+  });
+
+  html = html.replace(/^(?!<[a-zA-Z])(.+)$/gim, '<p class="mb-4 leading-relaxed text-foreground/90">$1</p>');
 
   return html;
 };
