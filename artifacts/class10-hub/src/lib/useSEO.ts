@@ -10,7 +10,7 @@ interface SEOProps {
 }
 
 const BASE_TITLE = "Class 10 Hub";
-const BASE_URL = "https://class10hubs.netlify.app";
+const BASE_URL = "https://study-central-10.pages.dev";
 
 export function useSEO({ title, description, keywords, ogTitle, ogDescription, canonical }: SEOProps) {
   useEffect(() => {

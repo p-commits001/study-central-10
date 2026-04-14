@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { CURRENT_SESSION } from "../constants";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
-import { BookOpen, Brain, Download, Lightbulb, ArrowRight, Target, Flame, Sparkles, Clock, CheckCircle2, Trash2, Plus, Calculator, FlaskConical, Video } from "lucide-react";
+import { BookOpen, Brain, Download, Lightbulb, ArrowRight, Target, Flame, Sparkles, Clock, CheckCircle2, Trash2, Plus, Calculator, FlaskConical, Video, Calendar, Star, FileText, GraduationCap } from "lucide-react";
 import { staggerContainer, fadeUp, fadeLeft, fadeRight, scaleIn, popIn, viewportOnce } from "@/lib/animations";
 import { useSEO, SEO_DATA } from "@/lib/useSEO";
 
@@ -47,11 +47,36 @@ function saveTasks(tasks: Task[]) {
   try { localStorage.setItem(PLANNER_KEY, JSON.stringify(tasks)); } catch { }
 }
 
-const MINI_QUIZ = [
-  { q: "Ohm's Law formula is:", a: "V = IR", options: ["V = IR", "V = I/R", "V = R/I", "I = VR"] },
-  { q: "Sum of angles in a triangle is:", a: "180°", options: ["90°", "180°", "270°", "360°"] },
-  { q: "The process by which plants make food using sunlight is:", a: "Photosynthesis", options: ["Respiration", "Photosynthesis", "Transpiration", "Digestion"] },
+const ALL_DAILY_QUESTIONS = [
+  { q: "Ohm's Law formula kya hai?", a: "V = IR", options: ["V = IR", "V = I/R", "V = R/I", "I = VR"] },
+  { q: "Triangle ke angles ka sum hota hai:", a: "180°", options: ["90°", "180°", "270°", "360°"] },
+  { q: "Paudhe sunlight se khaana banate hain is process mein:", a: "Photosynthesis", options: ["Respiration", "Photosynthesis", "Transpiration", "Digestion"] },
+  { q: "2Mg + O₂ → ? is reaction ka product kya hai?", a: "2MgO", options: ["2MgO", "Mg₂O", "MgO₂", "MgO"] },
+  { q: "Concave mirror ka use kiya jaata hai:", a: "Teeth examination", options: ["Rear-view mirror", "Teeth examination", "Searchlights", "Shop security"] },
+  { q: "HCF (12, 18) = ?", a: "6", options: ["6", "3", "12", "36"] },
+  { q: "Myopia ke liye konsa lens use hota hai?", a: "Concave lens", options: ["Concave lens", "Convex lens", "Bifocal lens", "Plane glass"] },
+  { q: "pH = 7 matlab solution hai:", a: "Neutral", options: ["Acidic", "Basic", "Neutral", "Salt"] },
+  { q: "AP: a=2, d=3, 5th term = ?", a: "14", options: ["14", "12", "17", "11"] },
+  { q: "Powerhouse of the cell kya hai?", a: "Mitochondria", options: ["Nucleus", "Mitochondria", "Ribosome", "Golgi body"] },
+  { q: "Baking soda ka chemical formula kya hai?", a: "NaHCO₃", options: ["NaHCO₃", "Na₂CO₃", "NaCl", "NaOH"] },
+  { q: "Pythagoras theorem: h² = ?", a: "p² + b²", options: ["p² + b²", "p + b", "2p + 2b", "p² - b²"] },
+  { q: "Insulin hormone kis organ se aata hai?", a: "Pancreas", options: ["Liver", "Pancreas", "Kidney", "Brain"] },
+  { q: "Area of circle = ?", a: "πr²", options: ["πr²", "2πr", "πd", "r²"] },
+  { q: "'A Letter to God' mein Lencho ne kisko letter likha?", a: "God", options: ["Post Office", "God", "Bank", "Government"] },
+  { q: "Fleming's LEFT hand rule kis ke liye hai?", a: "Electric motor", options: ["Electric motor", "Generator", "Transformer", "Solenoid"] },
+  { q: "Mode of grouped data mein hum sabse pehle dhundhhte hain:", a: "Modal class", options: ["Mean class", "Modal class", "Median class", "Highest value"] },
+  { q: "Nelson Mandela kab President bane?", a: "1994", options: ["1990", "1992", "1994", "1996"] },
+  { q: "Quadratic formula mein discriminant D = ?", a: "b² - 4ac", options: ["b² - 4ac", "b + 4ac", "4ac - b²", "-b ± √D"] },
+  { q: "Double displacement reaction mein kya hota hai?", a: "Ions exchange hote hain", options: ["Ek element dusre ko displace karta hai", "Ions exchange hote hain", "Heat release hoti hai", "Decomposition hoti hai"] },
 ];
+
+function getDailyQuiz(): typeof ALL_DAILY_QUESTIONS {
+  const day = new Date().getDate();
+  const startIdx = (day % 4) * 5;
+  return ALL_DAILY_QUESTIONS.slice(startIdx, startIdx + 5);
+}
+
+const MINI_QUIZ = getDailyQuiz();
 
 export default function Home() {
   useSEO(SEO_DATA.home);
@@ -365,8 +390,8 @@ export default function Home() {
               <div className="flex items-center gap-2 mb-4">
                 <motion.div animate={{ rotate: [0, -10, 10, 0] }} transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }} className="text-2xl">🎯</motion.div>
                 <div>
-                  <h3 className="font-black text-lg">Quick Quiz</h3>
-                  <p className="text-white/70 text-xs">1-minute challenge</p>
+                  <h3 className="font-black text-lg">Daily Quiz</h3>
+                  <p className="text-white/70 text-xs">Q {miniQ + 1} of {MINI_QUIZ.length} · Roz naaye 5 questions!</p>
                 </div>
               </div>
               <div className="bg-white/10 rounded-2xl p-4 mb-4">
@@ -469,6 +494,38 @@ export default function Home() {
               </motion.div>
             )}
           </div>
+        </div>
+      </motion.section>
+
+      {/* New Content Section */}
+      <motion.section variants={staggerContainer} initial="hidden" whileInView="show" viewport={viewportOnce} className="py-10">
+        <motion.div variants={fadeUp} className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 font-bold text-sm mb-3">
+            <Sparkles className="w-4 h-4" /> Naye Articles — April 2026
+          </div>
+          <h2 className="text-2xl md:text-3xl font-display font-bold">Khaas aapke liye naye resources</h2>
+          <p className="text-muted-foreground text-sm mt-2">Board exam ki taiyari ke liye ye pages zarur padho</p>
+        </motion.div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { title: "Syllabus & Strategy 2026-27", desc: "Month-wise study planner + PDF checklist", emoji: "📅", path: "/syllabus-strategy", color: "from-emerald-500 to-teal-500", bg: "bg-emerald-50 dark:bg-emerald-950/30", Icon: Calendar },
+            { title: "Maths Formula Cheat Sheet", desc: "All chapters formulas — ek hi jagah", emoji: "📐", path: "/maths-cheat-sheet", color: "from-blue-500 to-indigo-500", bg: "bg-blue-50 dark:bg-blue-950/30", Icon: FileText },
+            { title: "Topper's Notes & Tips", desc: "95%+ laane walon ke secrets", emoji: "✍️", path: "/toppers-notes", color: "from-amber-500 to-orange-500", bg: "bg-amber-50 dark:bg-amber-950/30", Icon: Star },
+            { title: "Class 10 Kaise Start Karein?", desc: "5 galtiyan jo bilkul mat karna", emoji: "🚀", path: "/start-class-10", color: "from-rose-500 to-pink-500", bg: "bg-rose-50 dark:bg-rose-950/30", Icon: GraduationCap },
+          ].map((item) => (
+            <motion.div key={item.path} variants={fadeUp}>
+              <Link href={item.path}>
+                <div className={`${item.bg} border border-border rounded-2xl p-5 hover:border-primary/40 hover:shadow-md transition-all cursor-pointer group h-full`}>
+                  <div className="text-3xl mb-3">{item.emoji}</div>
+                  <h3 className={`font-display font-bold text-sm mb-1 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>{item.title}</h3>
+                  <p className="text-xs text-muted-foreground mb-3">{item.desc}</p>
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary group-hover:gap-2 transition-all">
+                    Padho <ArrowRight className="w-3 h-3" />
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
         </div>
       </motion.section>
 

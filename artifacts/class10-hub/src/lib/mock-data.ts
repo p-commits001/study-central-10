@@ -238,6 +238,12 @@ Reactants → Products (ke roop mein likhte hain)
 
 **Balancing Rule:** Mass conservation ka niyam — dono sides par atoms ki sankhya equal honi chahiye.
 
+### Balanced Equation Examples
+1. 2H₂ + O₂ → 2H₂O (Hydrogen + Oxygen → Water)
+2. Fe + CuSO₄ → FeSO₄ + Cu (Iron displaces Copper)
+3. 2Mg + O₂ → 2MgO (Magnesium + Oxygen → Magnesium Oxide)
+4. NaOH + HCl → NaCl + H₂O (Neutralization reaction)
+
 ## Types of Chemical Reactions
 
 | Type | Definition | Example |
@@ -248,18 +254,62 @@ Reactants → Products (ke roop mein likhte hain)
 | Double Displacement | AB + CD → AD + CB | NaCl + AgNO₃ → NaNO₃ + AgCl |
 | Redox | Oxidation + Reduction saath mein | CuO + H₂ → Cu + H₂O |
 
+## 🔥 EXPERIMENT: Magnesium Ribbon ka Jalna (Board Experiment!)
+
+### Aim (Uddeshy)
+Magnesium ribbon ko hawa mein jalane par hone wali chemical reaction observe karna.
+
+### Required Materials (Samagri)
+- Magnesium ribbon (Mg)
+- Bunsen burner ya candle
+- Sandpaper (ribbon saaf karne ke liye)
+- China dish ya crucible
+- Tongs (chimte)
+
+### Procedure (Vidhi)
+1. Pehle **Magnesium ribbon ko sandpaper se saaf karo** — uski surface pe oxide layer hoti hai jo reaction slow karti hai.
+2. Mg ribbon ko tongs se pakdo aur bunsen burner ki flame ke paas le jao.
+3. Observe karo ki ribbon jalti hai ya nahi.
+
+### Observation (Avlokan)
+- Magnesium ribbon **tej safed (dazzling white) roshni** ke saath jalti hai.
+- Ek **safed powder** banta hai — yeh Magnesium Oxide (MgO) hai.
+- Bahut **zyada heat** produce hoti hai (Exothermic reaction).
+
+### Chemical Equation
+> **2Mg (s) + O₂ (g) → 2MgO (s)**
+> (Magnesium + Oxygen → Magnesium Oxide)
+
+### Type of Reaction (Kis Type ki Reaction Hai?)
+Yeh ek **Combination Reaction** hai — do substances (Mg + O₂) milakar ek naya substance (MgO) banate hain.
+Yeh ek **Oxidation Reaction** bhi hai — Magnesium ka oxidation hota hai (oxygen gain karta hai).
+Yeh ek **Exothermic Reaction** bhi hai — bahut zyada heat aur light release hoti hai.
+
+### Conclusion (Nishkarsh)
+Magnesium ribbon hawaai oxygen ke saath react karke Magnesium Oxide banata hai. Yeh combination + oxidation + exothermic reaction hai. Bright white light produce hoti hai.
+
+### Why Clean the Ribbon? (Saaf Kyun Karte Hain?)
+Magnesium ribbon ki surface pe pehle se **MgO ki layer** hoti hai (atmosphere ki oxygen se). Agar sandpaper se saaf nahi karenge toh reaction dhheere hogi ya hogi hi nahi.
+
+---
+> 💡 **Agar aapko iska full solution chahiye, diagram aur step-by-step explanation chahiye — toh hamari app install karein. App install karne par Magnesium Experiment ka full PDF aur video explanation milega!**
+
+---
+
 ## Exothermic vs Endothermic
-- **Exothermic:** Heat release hoti hai (e.g., combustion, respiration)
-- **Endothermic:** Heat absorb hoti hai (e.g., cooking, photosynthesis)
+- **Exothermic:** Heat release hoti hai (e.g., combustion, respiration, Mg ka jalna)
+- **Endothermic:** Heat absorb hoti hai (e.g., cooking, photosynthesis, dissolving NH₄Cl in water)
 
 ## Oxidation and Reduction (OIL RIG)
 > **O**xidation **I**s **L**oss (of electrons)
 > **R**eduction **I**s **G**ain (of electrons)
 
 ## 📌 Board Exam Tips
+- Magnesium experiment CBSE board mein bar bar aata hai — steps yaad rakho!
 - Decomposition reactions 3 types ki hoti hain: thermal, electrolytic, photolytic
 - Rancidity = oxidation of fats — antioxidants se rokti hai
 - Corrosion = surface ka oxidation (iron ka rust = Fe₂O₃.xH₂O)
+- Balanced equations mein subscripts change mat karo — sirf coefficients change karo
   `,
 
   s10: `

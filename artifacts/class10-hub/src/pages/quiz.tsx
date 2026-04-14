@@ -4,7 +4,7 @@ import { Trophy, CheckCircle2, XCircle, RotateCcw, Sparkles, Clock, BookOpen, Sh
 import { staggerContainer, fadeUp, scaleIn } from "@/lib/animations";
 import { useSEO, SEO_DATA } from "@/lib/useSEO";
 
-const SITE_LINK = "https://class10hubs.netlify.app";
+const SITE_LINK = "https://study-central-10.pages.dev";
 
 type Category = "maths" | "science" | "english";
 

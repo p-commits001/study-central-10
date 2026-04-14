@@ -30,6 +30,10 @@ const Resources       = lazy(() => import("./pages/resources"));
 const Disclaimer      = lazy(() => import("./pages/Disclaimer"));
 const PrivacyPolicy   = lazy(() => import("./pages/PrivacyPolicy"));
 const Contact         = lazy(() => import("./pages/contact"));
+const SyllabusStrategy = lazy(() => import("./pages/syllabus-strategy"));
+const MathsCheatSheet  = lazy(() => import("./pages/maths-cheat-sheet"));
+const ToppersNotes     = lazy(() => import("./pages/toppers-notes"));
+const StartClass10     = lazy(() => import("./pages/start-class-10"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -85,6 +89,10 @@ function Router() {
           <Route path="/privacy-policy"><AnimatedPage><PrivacyPolicy /></AnimatedPage></Route>
           <Route path="/disclaimer"><AnimatedPage><Disclaimer /></AnimatedPage></Route>
           <Route path="/search"><AnimatedPage><SearchPage /></AnimatedPage></Route>
+          <Route path="/syllabus-strategy"><AnimatedPage><SyllabusStrategy /></AnimatedPage></Route>
+          <Route path="/maths-cheat-sheet"><AnimatedPage><MathsCheatSheet /></AnimatedPage></Route>
+          <Route path="/toppers-notes"><AnimatedPage><ToppersNotes /></AnimatedPage></Route>
+          <Route path="/start-class-10"><AnimatedPage><StartClass10 /></AnimatedPage></Route>
         </Switch>
       </AnimatePresence>
     </Layout>
