@@ -64,7 +64,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     if (!supabase) return setError("Login setup nahi hai. Admin se contact karo.");
     setLoading(true); setError("");
     const redirectTo = window.location.href.includes("netlify")
-      ? "https://class10hubs.netlify.app"
+      ? "https://study-central-10.pages.dev"
       : window.location.origin;
     const { error: e } = await supabase.auth.signInWithOAuth({
       provider: "google",
@@ -86,7 +86,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       email: email.trim(),
       options: {
         emailRedirectTo: window.location.href.includes("netlify")
-          ? "https://class10hubs.netlify.app"
+          ? "https://study-central-10.pages.dev"
           : window.location.origin,
         shouldCreateUser: true
       }

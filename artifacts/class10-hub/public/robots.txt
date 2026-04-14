@@ -1,6 +1,6 @@
 # Class 10 Hub - robots.txt
 # Created by Priyanshu Taraori (priyanshutaraori)
-# Website: https://class10hubs.netlify.app
+# Website: https://study-central-10.pages.dev
 
 User-agent: *
 Allow: /
@@ -53,4 +53,4 @@ Disallow: /api/
 Disallow: /*.json$
 
 # Sitemap
-Sitemap: https://class10hubs.netlify.app/sitemap.xml
+Sitemap: https://study-central-10.pages.dev/sitemap.xml

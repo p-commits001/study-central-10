@@ -184,7 +184,7 @@ function VideoReel({ topic, facts, theme, isPlaying }: { topic: string; facts: s
               <motion.div animate={{ rotate: [0, -10, 10, 0], scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }} className="text-6xl mb-4">🏆</motion.div>
               <h2 className="text-2xl font-black mb-2">You Got It! 🎉</h2>
               <p className="text-white/70 text-sm mb-4">Share this reel with your classmates</p>
-              <div className="bg-white/20 rounded-xl px-4 py-2 text-xs font-bold">class10hubs.netlify.app</div>
+              <div className="bg-white/20 rounded-xl px-4 py-2 text-xs font-bold">study-central-10.pages.dev</div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -249,7 +249,7 @@ export default function AiVideoSummarizer() {
   const handlePlay = () => { setIsPlaying(v => !v); };
 
   const downloadReel = () => {
-    const text = `📚 ${topic} - Key Facts\n\n${facts.map((f, i) => `${i + 1}. ${f}`).join("\n")}\n\n🎓 Class 10 Hub · class10hubs.netlify.app`;
+    const text = `📚 ${topic} - Key Facts\n\n${facts.map((f, i) => `${i + 1}. ${f}`).join("\n")}\n\n🎓 Class 10 Hub · study-central-10.pages.dev`;
     const blob = new Blob([text], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a"); a.href = url; a.download = `${topic.replace(/\s+/g, "_")}_facts.txt`; a.click();

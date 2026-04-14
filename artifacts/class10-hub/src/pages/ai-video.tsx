@@ -32,7 +32,7 @@ const TOPICS: TopicData[] = [
       { duration: 3.8, type: "formula", character: "read", heading: "Myopia", subtext: "Door ka nahi dikhta", highlight: "→ Concave Lens", particles: "math" },
       { duration: 3.8, type: "formula", character: "read", heading: "Hypermetropia", subtext: "Paas ka nahi dikhta", highlight: "→ Convex Lens", particles: "math" },
       { duration: 4, type: "fact", character: "run", heading: "Tyndall Effect", subtext: "Sky NEELA · Sunset LAAL", highlight: "Scattering of Light!", particles: "stars" },
-      { duration: 3.5, type: "outro", character: "celebrate", heading: "5 marks pakke!", subtext: "class10hubs.netlify.app", particles: "hearts" },
+      { duration: 3.5, type: "outro", character: "celebrate", heading: "5 marks pakke!", subtext: "study-central-10.pages.dev", particles: "hearts" },
     ],
     narration: {
       hindi: ["Human eye aur colorful world — super important chapter!", "5 main parts: Cornea, Iris, Pupil, Lens, Retina", "Myopia mein door ka blur hota hai — Concave lens", "Hypermetropia mein paas ka blur — Convex lens", "Tyndall effect se aasman neela aur sunset laal!", "Class 10 Hub par complete notes paao!"],
@@ -49,7 +49,7 @@ const TOPICS: TopicData[] = [
       { duration: 3.8, type: "character", character: "think", heading: "Series Circuit", subtext: "Ek fail → Sab off!", highlight: "Same Current", particles: "math" },
       { duration: 3.8, type: "character", character: "run", heading: "Parallel Circuit", subtext: "Ghar mein yahi use hota hai", highlight: "Same Voltage", particles: "stars" },
       { duration: 4, type: "formula", character: "read", heading: "Heating Effect", subtext: "Heater · Toaster · Bulb", highlight: "H = I²Rt", particles: "math" },
-      { duration: 3.5, type: "outro", character: "celebrate", heading: "Board mein aata hai!", subtext: "class10hubs.netlify.app", particles: "hearts" },
+      { duration: 3.5, type: "outro", character: "celebrate", heading: "Board mein aata hai!", subtext: "study-central-10.pages.dev", particles: "hearts" },
     ],
     narration: {
       hindi: ["Electricity — highest marks wala chapter!", "Ohm's law: V = IR — voltage current resistance", "Series mein ek bulb fail toh sab off", "Ghar mein parallel circuit use hota hai", "Heating formula: H = I squared R t", "Board exam mein zaroor aata hai!"],
@@ -66,7 +66,7 @@ const TOPICS: TopicData[] = [
       { duration: 3.8, type: "character", character: "think", heading: "Chloroplast", subtext: "Green rung = Chlorophyll", highlight: "Yahan hoti hai!", particles: "leaves" },
       { duration: 3.8, type: "formula", character: "read", heading: "Light Reaction", subtext: "Sunlight + Water → O₂ + ATP", highlight: "Thylakoid mein", particles: "stars" },
       { duration: 4, type: "fact", character: "run", heading: "Calvin Cycle", subtext: "CO₂ → Glucose banta hai", highlight: "Stroma mein!", particles: "leaves" },
-      { duration: 3.5, type: "outro", character: "celebrate", heading: "3 marks pakke!", subtext: "class10hubs.netlify.app", particles: "hearts" },
+      { duration: 3.5, type: "outro", character: "celebrate", heading: "3 marks pakke!", subtext: "study-central-10.pages.dev", particles: "hearts" },
     ],
     narration: {
       hindi: ["Photosynthesis — Life Processes ka important topic!", "Equation: CO2 + paani se glucose aur oxygen", "Chloroplast green hai — chlorophyll wahan hai", "Light reaction mein O2 aur ATP banta hai", "Calvin cycle mein glucose banta hai", "3 marks pakke — Class 10 Hub!"],
@@ -83,7 +83,7 @@ const TOPICS: TopicData[] = [
       { duration: 3.8, type: "character", character: "think", heading: "Condensation", subtext: "Upar thanda → Baadal banta hai", highlight: "Bhap → Baadal!", particles: "stars" },
       { duration: 3.8, type: "fact", character: "run", heading: "Precipitation", subtext: "Baarish · Baraf · Ole", highlight: "Dharti pe aata hai!", particles: "stars" },
       { duration: 3.8, type: "character", character: "read", heading: "Collection", subtext: "Nadi · Jheel · Bhumigatjal", highlight: "Cycle complete!", particles: "stars" },
-      { duration: 3.5, type: "outro", character: "celebrate", heading: "2 marks guaranteed!", subtext: "class10hubs.netlify.app", particles: "hearts" },
+      { duration: 3.5, type: "outro", character: "celebrate", heading: "2 marks guaranteed!", subtext: "study-central-10.pages.dev", particles: "hearts" },
     ],
     narration: {
       hindi: ["Water cycle — Geography mein 2 marks pakka!", "Evaporation: Suraj se paani bhap banta hai", "Condensation: Thanda hokar baadal banta hai", "Precipitation: Baarish, baraf dharti pe girta hai", "Collection: Nadi, jheel mein ikatha hota hai", "Dono marks pakke — Class 10 Hub!"],
@@ -100,7 +100,7 @@ const TOPICS: TopicData[] = [
       { duration: 3.8, type: "formula", character: "think", heading: "HCF × LCM", subtext: "= a × b", highlight: "Sirf 2 numbers ke liye!", particles: "math" },
       { duration: 3.8, type: "fact", character: "run", heading: "Irrational Numbers", subtext: "√2, √3, √5 — sab irrational!", highlight: "Contradiction method", particles: "math" },
       { duration: 4, type: "formula", character: "read", heading: "Terminating Decimal", subtext: "p/q terminates if", highlight: "q = 2ᵐ × 5ⁿ", particles: "math" },
-      { duration: 3.5, type: "outro", character: "celebrate", heading: "Full marks possible!", subtext: "class10hubs.netlify.app", particles: "hearts" },
+      { duration: 3.5, type: "outro", character: "celebrate", heading: "Full marks possible!", subtext: "study-central-10.pages.dev", particles: "hearts" },
     ],
     narration: {
       hindi: ["Real Numbers — Chapter 1 Maths, bohot important!", "Euclid division: a = bq + r — HCF formula", "HCF times LCM = product of numbers", "Root 2, 3, 5 — sab irrational hain", "Terminating decimal: q = 2^m × 5^n", "Poore notes Class 10 Hub par free!"],
