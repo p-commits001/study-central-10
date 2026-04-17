@@ -1,12 +1,23 @@
-# Class 10 Hub - robots.txt
-# Created by Priyanshu Taraori (priyanshutaraori)
-# Website: https://study-central-10.pages.dev
+# Class 10 Hub — robots.txt
+# Site: https://study-central-10.pages.dev
+# Owner: Priyanshu Taraori
 
 User-agent: *
 Allow: /
 
-# Main pages
-Allow: /notes
+# Block internal/API paths only
+Disallow: /api/
+Disallow: /auth/
+Disallow: /.git/
+
+# Explicit allow for static files
+Allow: /ads.txt
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /manifest.json
+
+# Allow all content pages
+Allow: /notes/
 Allow: /quiz
 Allow: /questions
 Allow: /ai-tutor
@@ -16,41 +27,16 @@ Allow: /pdfs
 Allow: /books
 Allow: /tips
 Allow: /about
+Allow: /contact
+Allow: /syllabus-strategy
+Allow: /maths-cheat-sheet
+Allow: /toppers-notes
+Allow: /start-class-10
+Allow: /privacy-policy
+Allow: /disclaimer
 
-# Science notes
-Allow: /notes/science
-Allow: /notes/science/human-eye
-Allow: /notes/science/electricity
-Allow: /notes/science/life-processes
-Allow: /notes/science/chemical-reactions
-Allow: /notes/science/acids-bases-salts
-Allow: /notes/science/metals-nonmetals
-Allow: /notes/science/carbon-compounds
-Allow: /notes/science/light-reflection-refraction
-Allow: /notes/science/magnetic-effects
-Allow: /notes/science/our-environment
+# Crawl-delay for polite crawling
+Crawl-delay: 1
 
-# Maths notes
-Allow: /notes/maths
-Allow: /notes/maths/real-numbers
-Allow: /notes/maths/polynomials
-Allow: /notes/maths/linear-equations
-Allow: /notes/maths/quadratic-equations
-Allow: /notes/maths/arithmetic-progressions
-Allow: /notes/maths/triangles
-Allow: /notes/maths/trigonometry
-Allow: /notes/maths/statistics
-Allow: /notes/maths/probability
-
-# SST, English, Hindi
-Allow: /notes/sst
-Allow: /notes/english
-Allow: /notes/hindi
-
-# Disallow private/auth pages
-Disallow: /auth
-Disallow: /api/
-Disallow: /*.json$
-
-# Sitemap
+# Sitemaps
 Sitemap: https://study-central-10.pages.dev/sitemap.xml

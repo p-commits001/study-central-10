@@ -3,99 +3,99 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <!-- MAIN PAGES -->
-  <url><loc>https://study-central-10.pages.dev/</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>1.00</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://study-central-10.pages.dev/quiz</loc><lastmod>2026-04-14</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
-  <url><loc>https://study-central-10.pages.dev/questions</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://study-central-10.pages.dev/ai-tutor</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://study-central-10.pages.dev/ai-image</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/ai-video</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/pdfs</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/books</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://study-central-10.pages.dev/tips</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://study-central-10.pages.dev/about</loc><lastmod>2026-04-14</lastmod><changefreq>yearly</changefreq><priority>0.50</priority></url>
-  <url><loc>https://study-central-10.pages.dev/contact</loc><lastmod>2026-04-14</lastmod><changefreq>yearly</changefreq><priority>0.50</priority></url>
+  <url><loc>https://study-central-10.pages.dev/</loc><lastmod>2026-04-17</lastmod><changefreq>weekly</changefreq><priority>1.00</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes</loc><lastmod>2026-04-17</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://study-central-10.pages.dev/quiz</loc><lastmod>2026-04-17</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
+  <url><loc>https://study-central-10.pages.dev/questions</loc><lastmod>2026-04-17</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://study-central-10.pages.dev/ai-tutor</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://study-central-10.pages.dev/ai-image</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/ai-video</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/pdfs</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/books</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://study-central-10.pages.dev/tips</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://study-central-10.pages.dev/about</loc><lastmod>2026-04-17</lastmod><changefreq>yearly</changefreq><priority>0.50</priority></url>
+  <url><loc>https://study-central-10.pages.dev/contact</loc><lastmod>2026-04-17</lastmod><changefreq>yearly</changefreq><priority>0.50</priority></url>
 
   <!-- NEW CONTENT PAGES -->
-  <url><loc>https://study-central-10.pages.dev/syllabus-strategy</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
-  <url><loc>https://study-central-10.pages.dev/maths-cheat-sheet</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://study-central-10.pages.dev/toppers-notes</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://study-central-10.pages.dev/start-class-10</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://study-central-10.pages.dev/syllabus-strategy</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
+  <url><loc>https://study-central-10.pages.dev/maths-cheat-sheet</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://study-central-10.pages.dev/toppers-notes</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://study-central-10.pages.dev/start-class-10</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
 
   <!-- MATHS NOTES -->
-  <url><loc>https://study-central-10.pages.dev/notes/maths</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m1</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m2</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m3</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m4</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m5</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m6</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m7</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m8</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m9</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m10</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m11</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m12</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/maths/m13</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths</loc><lastmod>2026-04-17</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m1</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m2</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m3</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m4</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m5</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m6</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m7</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m8</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m9</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m10</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m11</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m12</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/maths/m13</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
   <!-- SCIENCE NOTES -->
-  <url><loc>https://study-central-10.pages.dev/notes/science</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s1</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s2</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s3</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s4</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s5</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s6</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s7</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s8</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s9</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s10</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s11</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s12</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s13</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/science/s14</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science</loc><lastmod>2026-04-17</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s1</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s2</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s3</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s4</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s5</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s6</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s7</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s8</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s9</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s10</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s11</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s12</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s13</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/science/s14</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
 
   <!-- SST NOTES -->
-  <url><loc>https://study-central-10.pages.dev/notes/sst</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss1</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss2</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss3</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss4</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss5</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss6</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss7</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss8</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss9</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss10</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss11</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss12</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss13</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss14</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/sst/ss_map</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst</loc><lastmod>2026-04-17</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss1</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss2</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss3</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss4</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss5</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss6</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss7</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss8</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss9</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss10</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss11</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss12</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss13</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss14</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/sst/ss_map</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
 
   <!-- ENGLISH NOTES -->
-  <url><loc>https://study-central-10.pages.dev/notes/english</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/english/e1</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/english/e2</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/english/e3</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/english/e4</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/english/e5</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/english/e6</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/english/e7</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/english/e8</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/english/e9</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/english/e_letter</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/english</loc><lastmod>2026-04-17</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/english/e1</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/english/e2</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/english/e3</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/english/e4</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/english/e5</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/english/e6</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/english/e7</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/english/e8</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/english/e9</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/english/e_letter</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
 
   <!-- HINDI NOTES -->
-  <url><loc>https://study-central-10.pages.dev/notes/hindi</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/hindi/h1</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/hindi/h2</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/hindi/h3</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/hindi/h4</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/hindi/h5</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/hindi/h6</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/hindi/h7</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/hindi/h8</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://study-central-10.pages.dev/notes/hindi/h9</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/hindi</loc><lastmod>2026-04-17</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/hindi/h1</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/hindi/h2</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/hindi/h3</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/hindi/h4</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/hindi/h5</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/hindi/h6</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/hindi/h7</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/hindi/h8</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://study-central-10.pages.dev/notes/hindi/h9</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
 
 </urlset>
